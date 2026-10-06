@@ -1,6 +1,6 @@
-# Design and Impelmentation of ALU
+# Design and Implementation of ALU
 
-- homework for the course "Design and Implementation of ALU" in NSYSU, Taiwan
+- homework for the course "Design and Implementation of Arithmetic Logic Unit" in NSYSU, Taiwan
 - TSMC N16 ADFP by TSRI was used for for synthesis (Disclaimer: In accordance with the NDA with TSRI ADFP, the netlist and related synthesis artifacts have been excluded from this repository. Only are the synthesis results demonstrated here.)
 
 ## Homework
