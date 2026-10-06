@@ -2,7 +2,9 @@
 
 ## 1. Introduction
 
-In ALU Hw1, signed fixed-point (FXP) addition and multiplication and single-precision floating-point (FLP) addition and multiplication were implemented. Both combinational and pipelined FLP designs were developed, including a three-stage multiplier, a four-stage adder, and a seven-stage adder. Round-to-nearest was used, with halfway magnitudes rounded upward. IEEE 754 special numbers (infinities, NaNs, and subnormal) operands, were not considered within the Hw1 scope. Area, Delay, and Between synthesis configurations were compared using circuit area, delay, latency, and estimated power. The RTL was checked through pre-sim, and the synthesized netlists were checked through post-sim with SDF back-annotation.
+In ALU Hw1, signed fixed-point (FXP) addition and multiplication and single-precision floating-point (FLP) addition and multiplication were implemented. Both combinational and pipelined FLP designs were developed, including a three-stage multiplier, a four-stage adder, and a seven-stage adder. Round-to-nearest was used, with halfway magnitudes rounded upward. IEEE 754 special numbers (infinities, NaNs, and subnormal) operands, were not considered within the Hw1 scope.
+
+Walking down the design flow, Area, Delay, and Between synthesis configurations were compared using circuit area, delay, latency, and estimated power. The RTL was checked through pre-sim, and the synthesized netlists were checked through post-sim with SDF back-annotation. APR is NOT required for Hw1.
 
 ## 2. Methodology
 
