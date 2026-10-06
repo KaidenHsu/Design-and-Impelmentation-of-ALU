@@ -7,7 +7,7 @@
 
  Hw | Description
 --------|:-----
-[Hw1][1]| Fixed-point and Floating-point Addition/Multiplication
+[Hw1][1]| Single-precision Floating-point Addition and Multiplication
 
 [1]: hw/HW1/
 
