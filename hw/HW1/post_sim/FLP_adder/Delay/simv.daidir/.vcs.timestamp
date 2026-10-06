@@ -1,0 +1,134 @@
+1        
+0 /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder/Delay/round2/timing.sdf_c
+45
++access+r
++fsdb+mda
++fsdbfile+wave.fsdb
++full64
++incdir+/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_adder/Delay
++itf+/usr/cad/synopsys/vcs/2023.12/linux/lib/vcsdp_lite.tab
++neg_tchk
++vcs+fsdbon
++vcsd1
++vpi
+-Mamsrun=
+-Masflags=--32
+-Mcc=gcc
+-Mcfl= -pipe -m32 -O -I/usr/cad/synopsys/vcs/2023.12/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -m32 -m32 -rdynamic
+-Mobjects= /usr/cad/synopsys/vcs/2023.12/linux/lib/libvirsim.so /usr/cad/synopsys/vcs/2023.12/linux/lib/liberrorinf.so /usr/cad/synopsys/vcs/2023.12/linux/lib/libsnpsmalloc.so /usr/cad/synopsys/vcs/2023.12/linux/lib/libvfs.so
+-Mout=/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_adder/Delay/simv
+-Msaverestoreobj=/usr/cad/synopsys/vcs/2023.12/linux/lib/vcs_save_restore_new.o
+-Msyslibs=/usr/cad/synopsys/verdi/2023.12/share/PLI/VCS/LINUX/pli.a /usr/cad/synopsys/vcs/2023.12/linux/lib/ctype-stubs_32.a -ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -m32 -I/usr/cad/synopsys/vcs/2023.12/include
+-Mxllcflags=
+-P
+-Xvcs_run_simv=1
+-debug_access
+-debug_access+all
+-error=noMPD
+-fsdb
+-gen_obj
+-o /MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_adder/Delay/simv
+-picarchive
+-sverilog
+-top
+/usr/cad/synopsys/vcs/2023.12/linux/bin/vcs1
+testbench
+/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_adder/Delay/simv
+/usr/cad/synopsys/verdi/2023.12/share/PLI/VCS/LINUX/verdi.tab
+/MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder/Delay/round2/netlist.v
+/cad/CBDK/ADFP/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/VERILOG/N16ADFP_StdCell.v
+67
+mraarch=linux_64
+installdir=/cad/synopsys/hspice/2023.12/hspice
+XILINX_VIVADO=/cad/Vivado/2018.3
+XDG_SESSION_ID=59942
+XDG_RUNTIME_DIR=/run/user/1769
+XDG_DATA_DIRS=/MasterClass/M143010027_ALU/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+VMR_MODE_FLAG=32
+VERDI_HOME=/usr/cad/synopsys/verdi/2023.12
+VENDOR=unknown
+VCS_STATIC_HOME=/usr/cad/synopsys/vcs/2023.12/vcfca
+VCS_PYTHON3=/usr/cad/synopsys/vcs/2023.12/linux/bin/Python-3.6.1/bin/python3
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_MX_HOME_INTERNAL=1
+VCS_HOME=/usr/cad/synopsys/vcs/2023.12
+VCS_EXEC_DONE=1
+VCS_DEPTH=0
+VCS_CC=gcc
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux
+VCS_AMD_PURE32=1
+UNAME=/bin/uname
+TOOL_HOME=/usr/cad/synopsys/vcs/2023.12/linux
+TMIARCH=RH_64
+SYN_MAN_DIR=/usr/cad/synopsys/star-rcxt/2024.09-sp2//starrc/man
+SYNOPSYS_NCX_ROOT=/usr/cad/synopsys/star-rcxt/2024.09-sp2/
+SYNOPSYS_LC_ROOT=/usr/cad/synopsys/lc/cur
+SYNOPSYS=/usr/cad/synopsys/formality/cur
+SSH_TTY=/dev/pts/21
+SSH_CONNECTION=140.117.196.195 8066 140.117.168.154 22
+SSH_CLIENT=140.117.196.195 8066 22
+SPAPI_AHDL_INCLUDE=/cad/synopsys/hspice/2023.12/hspice/include
+SNPS_VCS_PYTHON3=/usr/cad/synopsys/vcs/2023.12/linux/bin/Python-3.6.1/bin/python3
+SNPS_VCS_CLANG_PATH=/usr/cad/synopsys/vcs/2023.12/linux/clang
+SNPS_PLATFORM=linux64
+SNPS_INTERNAL_VCS_LINUX_OS=linux
+SNPS_64=1
+SHLIB_PATH=/usr/cad/synopsys/verdi/2023.12/etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/2023.12/share/PLI/lib/LINUX64/:/usr/cad/synopsys/verdi/2023.12/share/PLI/VCS/LINUX64/:
+SELINUX_USE_CURRENT_RANGE=
+SELINUX_ROLE_REQUESTED=
+SELINUX_LEVEL_REQUESTED=
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+REMOTEHOST=140.117.196.195
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+PROMPT_COMMAND=history -a; 
+OVA_UUM=0
+OSTYPE=linux
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+HW1_ROOT=/MasterClass/M143010027_ALU/Hws/HW1
+HSP_SIGMA_AMP=/cad/synopsys/hspice/2023.12/hspice/linux64/python/AVA/ava
+HSP_HOME=/cad/synopsys/hspice/2023.12/hspice
+HSP_GCC_VERSION=9.5.0
+HSP_GCC=/cad/synopsys/hspice/2023.12/hspice/GNU/linux64/gcc/bin/gcc -m64 
+HOSTTYPE=x86_64-linux
+HISTTIMEFORMAT=%Y-%m-%d %H:%M:%S  
+HISTFILESIZE=100000
+HISTCONTROL=ignoredups
+GROUP=M143010027_ALU
+FORMALITY=/usr/cad/synopsys/formality/cur
+CMIARCH=RH_64
+CDS_LOAD_ENV=CSF
+CDPL_HOME=/cad/synopsys/hspice/2023.12/hspice/cdpl
+ARCH=linux64
+0
+0
+8
+1791204344 sdf_annotation.log
+1791204342 /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder/Delay/round2/timing.sdf
+1791204342 run_config.vh
+1725945059 /cad/CBDK/ADFP/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/VERILOG/N16ADFP_StdCell.v
+1791204341 /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder/Delay/round2/netlist.v
+1791203679 /MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v
+1700046855 /usr/cad/synopsys/verdi/2023.12/share/PLI/VCS/LINUX/verdi.tab
+1701102453 /usr/cad/synopsys/vcs/2023.12/linux/lib/vcsdp_lite.tab
+4
+1701104144 /usr/cad/synopsys/vcs/2023.12/linux/lib/libvirsim.so
+1701103500 /usr/cad/synopsys/vcs/2023.12/linux/lib/liberrorinf.so
+1701103368 /usr/cad/synopsys/vcs/2023.12/linux/lib/libsnpsmalloc.so
+1701103830 /usr/cad/synopsys/vcs/2023.12/linux/lib/libvfs.so
+1791204348 /MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_adder/Delay/simv.daidir
+-1 partitionlib

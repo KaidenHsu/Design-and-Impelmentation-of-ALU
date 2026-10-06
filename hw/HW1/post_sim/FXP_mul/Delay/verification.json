@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "design": "FXP_mul",
+  "verification_id": "7e49b8daf65cc37725cc71b1cbc78ec89474c75766683d16c63468ce6a7f2a15",
+  "synthesis_id": "9d543f305d91318c777911eea891aecef2690daa2e1943b466e684e8195e21cf",
+  "schedule": "TA_original",
+  "pipeline_stages": 1,
+  "period_ns": "5.0",
+  "path": "post_sim/FXP_mul/Delay",
+  "log": "log/FXP_mul/Delay/post_sim.log",
+  "round": 2,
+  "synthesis_period_ns": "0.332",
+  "checked": 100,
+  "errors": 0,
+  "waveform": "post_sim/FXP_mul/Delay/wave.fsdb",
+  "wave_format": "fsdb",
+  "sdf_warnings": {}
+}

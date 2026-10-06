@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "design": "FLP_mul",
+  "verification_id": "b46da01064808d9d8d569caf7f362fb10df23101bece948bc49dc5bb0c51b071",
+  "synthesis_id": "ddfd167f9ebd4d118931603553abdb78e8a8e5cf20cc86964fc16dc7e03c9feb",
+  "schedule": "TA_original",
+  "pipeline_stages": 1,
+  "period_ns": "5.0",
+  "path": "post_sim/FLP_mul/Area",
+  "log": "log/FLP_mul/Area/post_sim.log",
+  "round": 5,
+  "synthesis_period_ns": "2.425",
+  "checked": 100,
+  "errors": 0,
+  "waveform": "post_sim/FLP_mul/Area/wave.fsdb",
+  "wave_format": "fsdb",
+  "sdf_warnings": {
+    "SDFCOM_IWSBA": 26,
+    "SDFCOM_SWC": 581
+  }
+}

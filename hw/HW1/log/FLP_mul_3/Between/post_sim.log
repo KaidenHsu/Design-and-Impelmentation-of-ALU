@@ -1,0 +1,218 @@
+$ vcs -R -debug_access+all +full64 +access+r -sverilog -top testbench -o /MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_mul_3/Between/simv +incdir+/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_mul_3/Between -error=noMPD +neg_tchk +vcs+fsdbon +fsdb+mda +fsdbfile+wave.fsdb /MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Between/round1/netlist.v /cad/CBDK/ADFP/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/VERILOG/N16ADFP_StdCell.v
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+            Version V-2023.12 -- Mon Oct  5 20:47:11 2026
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '/MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v'
+Parsing included file 'run_config.vh'.
+Back to file '/MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v'.
+Parsing design file '/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Between/round1/netlist.v'
+Parsing design file '/cad/CBDK/ADFP/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/VERILOG/N16ADFP_StdCell.v'
+Top Level Modules:
+       testbench
+TimeScale is 1 ns / 1 fs
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Between/round1/timing.sdf"
+   ***    Annotation scope: testbench.test_module
+   ***    SDF Annotator log file: "sdf_annotation.log"
+   ***    MTM selection: "MAXIMUM"
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Mon Oct  5 20:47:12 2026
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Between/round1/timing.sdf, 80
+module: XNR2D1BWP16P90, "instance: testbench.test_module.mult_28.U1655"
+  SDF Warning: The path from mult_28.U1655.ZN to U270.A1 doesn't have a simple
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Between/round1/timing.sdf, 85
+module: XOR2D1BWP16P90, "instance: testbench.test_module.mult_28.U1654"
+  SDF Warning: The path from mult_28.U1654.Z to U268.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Between/round1/timing.sdf, 90
+module: XNR2D1BWP16P90, "instance: testbench.test_module.mult_28.U1653"
+  SDF Warning: The path from mult_28.U1653.ZN to U266.A1 doesn't have a simple
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Between/round1/timing.sdf, 95
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U1784"
+  SDF Warning: The path from mult_28.U1784.Z to U264.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Between/round1/timing.sdf, 100
+module: XNR2D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U1783"
+  SDF Warning: The path from mult_28.U1783.ZN to U262.A1 doesn't have a simple
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Between/round1/timing.sdf, 105
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U1781"
+  SDF Warning: The path from mult_28.U1781.Z to U260.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Between/round1/timing.sdf, 110
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U152"
+  SDF Warning: The path from mult_28.U152.S to U258.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Between/round1/timing.sdf, 115
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U1728"
+  SDF Warning: The path from mult_28.U1728.S to U256.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Between/round1/timing.sdf, 120
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U1729"
+  SDF Warning: The path from mult_28.U1729.S to U254.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+All future warnings not reported; use +sdfverbose to report them.
+See also the log file: sdf_annotation.log
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Between/round1/timing.sdf, 125
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U1730"
+  SDF Warning: The path from mult_28.U1730.S to U252.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+          Total errors: 0
+          Total warnings: 89
+   ***    SDF annotation completed: Mon Oct  5 20:47:12 2026
+
+
+Starting vcs inline pass...
+46 modules and 3 UDPs read.
+recompiling module testbench
+recompiling module FLP_mul_DW01_add_2
+recompiling module FLP_mul_DW01_add_0
+recompiling module FLP_mul_DW_mult_uns_1
+recompiling module FLP_mul
+recompiling module AN2D1BWP16P90
+recompiling module AN2D1BWP16P90LVT
+recompiling module AN2D1BWP20P90
+recompiling module AN3D1BWP16P90LVT
+recompiling module AO22D1BWP16P90LVT
+recompiling module AOI21D1BWP16P90
+recompiling module AOI21D1BWP16P90LVT
+recompiling module AOI222D1BWP16P90LVT
+recompiling module AOI22D1BWP16P90LVT
+recompiling module CKBD1BWP16P90LVT
+recompiling module CKND1BWP16P90LVT
+recompiling module DFQD1BWP16P90LVT
+recompiling module DFQD2BWP16P90LVT
+recompiling module FA1D1BWP16P90LVT
+recompiling module HA1D1BWP16P90LVT
+recompiling module HA1D2BWP16P90LVT
+recompiling module IAO21D1BWP16P90LVT
+recompiling module IND2D1BWP16P90LVT
+recompiling module INR2D1BWP16P90
+recompiling module INR2D1BWP16P90LVT
+recompiling module INVD1BWP16P90
+recompiling module INVD1BWP16P90LVT
+recompiling module IOA21D1BWP16P90LVT
+recompiling module MAOI222D1BWP16P90LVT
+recompiling module MUX2D1BWP16P90LVT
+recompiling module ND2D1BWP16P90LVT
+recompiling module NR2D1BWP16P90
+recompiling module NR2D1BWP16P90LVT
+recompiling module NR2D1BWP20P90
+recompiling module OA21D1BWP16P90LVT
+recompiling module OAI21D1BWP16P90
+recompiling module OAI21D1BWP16P90LVT
+recompiling module OR2D1BWP16P90LVT
+recompiling module TIEHBWP20P90LVT
+recompiling module TIELBWP20P90LVT
+recompiling module XNR2D1BWP16P90
+recompiling module XNR2D1BWP16P90LVT
+recompiling module XOR2D1BWP16P90
+recompiling module XOR2D1BWP16P90LVT
+recompiling module XOR3D1BWP16P90LVT
+recompiling module XOR3D2BWP16P90LVT
+All of 46 modules done
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_mul_3/Between/simv ]; then chmod a-x /MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_mul_3/Between/simv; fi
+g++  -o /MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_mul_3/Between/simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/usr/cad/synopsys/vcs/2023.12/linux/lib -L/usr/cad/synopsys/vcs/2023.12/linux/lib  -Wl,-rpath-link=./   objs/amcQw_d.o   _22716_archive_1.so objs/udps/m6zeg.o objs/udps/JvR1L.o objs/udps/df3ii.o   SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2023.12/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /usr/cad/synopsys/vcs/2023.12/linux/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2023.12/share/PLI/VCS/LINUX/pli.a /usr/cad/synopsys/vcs/2023.12/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_mul_3/Between/simv up to date
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version V-2023.12; Runtime version V-2023.12;  Oct  5 20:47 2026
+Doing SDF annotation ...... Done
+*Verdi* Loading libsscore_vcs202312.so
+FSDB Dumper for VCS, Release Verdi_V-2023.12, Linux, 11/15/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'wave.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+HW1_SDF_ANNOTATION_REQUESTED /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Between/round1/timing.sdf
+*Verdi* : Begin traversing the scope (testbench), layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+-----------------------------------------
+
+-               FLP_mul_3               -
+
+-----------------------------------------
+
+-----------------------------------------
+
+Score: 100
+
+Avg error: 2.145374e-08
+
+-----------------------------------------
+
+$finish called from file "/MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v", line 296.
+$finish at simulation time            515000000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 515000000 fs
+CPU Time:      0.820 seconds;       Data structure size:   0.4Mb
+Mon Oct  5 20:47:15 2026
+CPU time: 1.490 seconds to compile + .467 seconds to elab + .474 seconds to link + .855 seconds in simulation

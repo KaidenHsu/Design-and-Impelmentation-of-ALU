@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1791204073.877419140, "rt":2.11, "ut":1.63, "st":0.25}}
+{"vcselab":{"timestamp_begin":1791204076.086220843, "rt":0.71, "ut":0.46, "st":0.07}}
+{"link":{"timestamp_begin":1791204076.863153075, "rt":0.49, "ut":0.34, "st":0.17}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1791204073.073940834}
+{"VCS_COMP_START_TIME": 1791204073.073940834}
+{"VCS_COMP_END_TIME": 1791204078.820583833}
+{"VCS_USER_OPTIONS": "-R -debug_access+all +full64 +access+r -sverilog -top testbench -o /MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_mul_3/Area/simv +incdir+/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_mul_3/Area -error=noMPD +neg_tchk +vcs+fsdbon +fsdb+mda +fsdbfile+wave.fsdb /MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/netlist.v /cad/CBDK/ADFP/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/VERILOG/N16ADFP_StdCell.v"}
+{"vcs1": {"peak_mem": 291200}}
+{"vcselab": {"peak_mem": 157648}}

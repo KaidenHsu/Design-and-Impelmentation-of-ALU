@@ -1,0 +1,301 @@
+{
+  "session": "1d2df4abb96f",
+  "jobs": 32,
+  "tasks": [
+    {
+      "design": "FLP_adder",
+      "optimization": "",
+      "phase": "Pre-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FXP_mul",
+      "optimization": "",
+      "phase": "Pre-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FXP_adder",
+      "optimization": "",
+      "phase": "Pre-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder_7",
+      "optimization": "",
+      "phase": "Pre-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_mul_3",
+      "optimization": "",
+      "phase": "Pre-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder_4",
+      "optimization": "",
+      "phase": "Pre-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_mul",
+      "optimization": "",
+      "phase": "Pre-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FXP_mul",
+      "optimization": "Area",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder_4",
+      "optimization": "Area",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FXP_mul",
+      "optimization": "Area",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder_4",
+      "optimization": "Area",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FXP_adder",
+      "optimization": "Area",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FXP_adder",
+      "optimization": "Area",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_mul_3",
+      "optimization": "Area",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_mul_3",
+      "optimization": "Area",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder_7",
+      "optimization": "Delay",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder_7",
+      "optimization": "Delay",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FXP_mul",
+      "optimization": "Delay",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FXP_mul",
+      "optimization": "Delay",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_mul",
+      "optimization": "Delay",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_mul",
+      "optimization": "Delay",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FXP_adder",
+      "optimization": "Delay",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FXP_adder",
+      "optimization": "Delay",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FXP_mul",
+      "optimization": "Between",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FXP_mul",
+      "optimization": "Between",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder",
+      "optimization": "Area",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder",
+      "optimization": "Area",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FXP_adder",
+      "optimization": "Between",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_mul",
+      "optimization": "Area",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FXP_adder",
+      "optimization": "Between",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_mul",
+      "optimization": "Area",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_mul_3",
+      "optimization": "Delay",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_mul_3",
+      "optimization": "Delay",
+      "phase": "Post-sim",
+      "status": "failed",
+      "error": "RuntimeError: Unaccepted SDF annotation/timing diagnostic: Warning-[SDFCOM_NL] Negative Limit Not Allowed\n/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Delay/round3/timing.sdf, 8540\nmodule: DFCNQD2BWP16P90LVT, \"instance: testbench.test_module.s2_md_raw_reg_34_\"\n  SDF Warning: $recovery/$removal timing checks does not support negative \n  values.\n  Please use; see /MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_mul_3/Delay/sdf_annotation.log"
+    },
+    {
+      "design": "FLP_adder",
+      "optimization": "Delay",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder",
+      "optimization": "Delay",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_mul",
+      "optimization": "Between",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_mul",
+      "optimization": "Between",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder_7",
+      "optimization": "Area",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder_7",
+      "optimization": "Area",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_mul_3",
+      "optimization": "Between",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_mul_3",
+      "optimization": "Between",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder",
+      "optimization": "Between",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder",
+      "optimization": "Between",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder_4",
+      "optimization": "Delay",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder_4",
+      "optimization": "Delay",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder_7",
+      "optimization": "Between",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder_7",
+      "optimization": "Between",
+      "phase": "Post-sim",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder_4",
+      "optimization": "Between",
+      "phase": "Synthesis",
+      "status": "passed"
+    },
+    {
+      "design": "FLP_adder_4",
+      "optimization": "Between",
+      "phase": "Post-sim",
+      "status": "passed"
+    }
+  ]
+}

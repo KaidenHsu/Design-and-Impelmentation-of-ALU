@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "design": "FLP_adder",
+  "verification_id": "8673e71b9c4d58131f2cdc1f3e3fa6679ca254e3088fe871ab48d2303f86708a",
+  "synthesis_id": "c6ee5241b61a79e1ab549edbb642ee763a07113071a7ab058b123975c3b409b7",
+  "schedule": "TA_original",
+  "pipeline_stages": 1,
+  "period_ns": "5.0",
+  "path": "post_sim/FLP_adder/Between",
+  "log": "log/FLP_adder/Between/post_sim.log",
+  "round": 1,
+  "synthesis_period_ns": "1.982",
+  "checked": 100,
+  "errors": 0,
+  "waveform": "post_sim/FLP_adder/Between/wave.fsdb",
+  "wave_format": "fsdb",
+  "sdf_warnings": {
+    "SDFCOM_IWSBA": 76,
+    "SDFCOM_SWC": 214
+  }
+}

@@ -1,0 +1,1106 @@
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf"
+   ***    Annotation scope: testbench.test_module
+   ***    SDF Annotator log file: "sdf_annotation.log"
+   ***    MTM selection: "MAXIMUM"
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Mon Oct  5 20:39:20 2026
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 881
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U48"
+  SDF Warning: INTERCONNECT from add_114.U48.Z to U965.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 883
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U46"
+  SDF Warning: INTERCONNECT from add_114.U46.Z to U963.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 887
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U44"
+  SDF Warning: INTERCONNECT from add_114.U44.Z to U960.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 888
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U42"
+  SDF Warning: INTERCONNECT from add_114.U42.Z to U959.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 889
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U40"
+  SDF Warning: INTERCONNECT from add_114.U40.Z to U958.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 898
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U37"
+  SDF Warning: INTERCONNECT from add_114.U37.Z to U955.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 907
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U35"
+  SDF Warning: INTERCONNECT from add_114.U35.Z to U952.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 916
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U33"
+  SDF Warning: INTERCONNECT from add_114.U33.Z to U949.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 962
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U31"
+  SDF Warning: INTERCONNECT from add_114.U31.Z to U935.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 979
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U29"
+  SDF Warning: INTERCONNECT from add_114.U29.Z to U930.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 996
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U27"
+  SDF Warning: INTERCONNECT from add_114.U27.Z to U925.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1047
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.add_114.U26"
+  SDF Warning: INTERCONNECT from add_114.U26.ZN to U912.B1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1073
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U41"
+  SDF Warning: INTERCONNECT from add_114.U41.Z to U905.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1083
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U28"
+  SDF Warning: INTERCONNECT from add_114.U28.Z to U902.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1093
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U30"
+  SDF Warning: INTERCONNECT from add_114.U30.Z to U899.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1103
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U32"
+  SDF Warning: INTERCONNECT from add_114.U32.Z to U896.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1113
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U34"
+  SDF Warning: INTERCONNECT from add_114.U34.Z to U893.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1123
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U36"
+  SDF Warning: INTERCONNECT from add_114.U36.Z to U890.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1133
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U38"
+  SDF Warning: INTERCONNECT from add_114.U38.Z to U887.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1143
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U43"
+  SDF Warning: INTERCONNECT from add_114.U43.Z to U884.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1153
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U45"
+  SDF Warning: INTERCONNECT from add_114.U45.Z to U881.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1163
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U47"
+  SDF Warning: INTERCONNECT from add_114.U47.Z to U878.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1168
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U25"
+  SDF Warning: INTERCONNECT from add_114.U25.Z to U876.B1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1177
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U28"
+  SDF Warning: INTERCONNECT from add_114.U28.Z to U874.B1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1186
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U30"
+  SDF Warning: INTERCONNECT from add_114.U30.Z to U872.B1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1195
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U32"
+  SDF Warning: INTERCONNECT from add_114.U32.Z to U870.B1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1204
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U34"
+  SDF Warning: INTERCONNECT from add_114.U34.Z to U868.B1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1213
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U36"
+  SDF Warning: INTERCONNECT from add_114.U36.Z to U866.B1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1222
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U39"
+  SDF Warning: INTERCONNECT from add_114.U39.Z to U864.B1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1231
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U41"
+  SDF Warning: INTERCONNECT from add_114.U41.Z to U862.B1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1240
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U43"
+  SDF Warning: INTERCONNECT from add_114.U43.Z to U860.B1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1249
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U45"
+  SDF Warning: INTERCONNECT from add_114.U45.Z to U858.B1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1258
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U47"
+  SDF Warning: INTERCONNECT from add_114.U47.Z to U856.B1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1280
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U39"
+  SDF Warning: INTERCONNECT from add_114.U39.Z to U850.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1379
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U24"
+  SDF Warning: INTERCONNECT from add_114.U24.Z to U812.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1476
+module: DFQD2BWP16P90LVT, "instance: testbench.test_module.s1_mb_aligned_reg_0_"
+  SDF Warning: INTERCONNECT from s1_mb_aligned_reg_0_.Q to U773.B3 has 
+  Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1210,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1585
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U66"
+  SDF Warning: INTERCONNECT from sub_72.U66.Z to U733.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1591
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U64"
+  SDF Warning: INTERCONNECT from sub_72.U64.Z to U730.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1597
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U62"
+  SDF Warning: INTERCONNECT from sub_72.U62.Z to U727.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1603
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U60"
+  SDF Warning: INTERCONNECT from sub_72.U60.Z to U724.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1624
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U58"
+  SDF Warning: INTERCONNECT from sub_72.U58.Z to U717.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1634
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U56"
+  SDF Warning: INTERCONNECT from sub_72.U56.Z to U713.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1640
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U54"
+  SDF Warning: INTERCONNECT from sub_72.U54.Z to U710.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1651
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U609"
+  SDF Warning: INTERCONNECT from U609.ZN to U705.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1655
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U66"
+  SDF Warning: INTERCONNECT from sub_73.U66.Z to U704.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1657
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U52"
+  SDF Warning: INTERCONNECT from sub_72.U52.Z to U703.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1664
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U65"
+  SDF Warning: INTERCONNECT from sub_73.U65.Z to U701.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1668
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U50"
+  SDF Warning: INTERCONNECT from sub_72.U50.Z to U698.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1675
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U63"
+  SDF Warning: INTERCONNECT from sub_73.U63.Z to U696.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1679
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U48"
+  SDF Warning: INTERCONNECT from sub_72.U48.Z to U693.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1686
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U61"
+  SDF Warning: INTERCONNECT from sub_73.U61.Z to U691.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1690
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U46"
+  SDF Warning: INTERCONNECT from sub_72.U46.Z to U688.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1697
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U59"
+  SDF Warning: INTERCONNECT from sub_73.U59.Z to U686.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1701
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U44"
+  SDF Warning: INTERCONNECT from sub_72.U44.Z to U683.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1710
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U56"
+  SDF Warning: INTERCONNECT from sub_73.U56.Z to U679.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1712
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U42"
+  SDF Warning: INTERCONNECT from sub_72.U42.Z to U678.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1721
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U54"
+  SDF Warning: INTERCONNECT from sub_73.U54.Z to U674.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1723
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U40"
+  SDF Warning: INTERCONNECT from sub_72.U40.Z to U673.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1731
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U53"
+  SDF Warning: INTERCONNECT from sub_73.U53.Z to U670.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1734
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U38"
+  SDF Warning: INTERCONNECT from sub_72.U38.Z to U668.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1742
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U51"
+  SDF Warning: INTERCONNECT from sub_73.U51.Z to U665.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1745
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U36"
+  SDF Warning: INTERCONNECT from sub_72.U36.Z to U663.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1758
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U48"
+  SDF Warning: INTERCONNECT from sub_73.U48.Z to U657.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1764
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U34"
+  SDF Warning: INTERCONNECT from sub_72.U34.Z to U655.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1777
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U46"
+  SDF Warning: INTERCONNECT from sub_73.U46.Z to U650.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1779
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U32"
+  SDF Warning: INTERCONNECT from sub_72.U32.Z to U649.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1790
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U44"
+  SDF Warning: INTERCONNECT from sub_73.U44.Z to U644.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1792
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U30"
+  SDF Warning: INTERCONNECT from sub_72.U30.Z to U643.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1801
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U42"
+  SDF Warning: INTERCONNECT from sub_73.U42.Z to U639.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1803
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U28"
+  SDF Warning: INTERCONNECT from sub_72.U28.Z to U638.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1812
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U40"
+  SDF Warning: INTERCONNECT from sub_73.U40.Z to U634.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1814
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U26"
+  SDF Warning: INTERCONNECT from sub_72.U26.Z to U633.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1823
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U38"
+  SDF Warning: INTERCONNECT from sub_73.U38.Z to U629.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1826
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U23"
+  SDF Warning: INTERCONNECT from sub_72.U23.Z to U627.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1834
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U36"
+  SDF Warning: INTERCONNECT from sub_73.U36.Z to U624.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1839
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U34"
+  SDF Warning: INTERCONNECT from sub_73.U34.Z to U622.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1844
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U32"
+  SDF Warning: INTERCONNECT from sub_73.U32.Z to U620.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1849
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U30"
+  SDF Warning: INTERCONNECT from sub_73.U30.Z to U618.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1854
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U28"
+  SDF Warning: INTERCONNECT from sub_73.U28.Z to U616.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1859
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U26"
+  SDF Warning: INTERCONNECT from sub_73.U26.Z to U614.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1871
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U24"
+  SDF Warning: INTERCONNECT from sub_73.U24.Z to U608.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1895
+module: DFQD2BWP16P90LVT, "instance: testbench.test_module.s1_mb_aligned_reg_0_"
+  SDF Warning: The path from s1_mb_aligned_reg_0_.Q to U599.A2 doesn't have a 
+  simple wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 1967
+module: AN2D1BWP16P90LVT, "instance: testbench.test_module.sub_73.U1"
+  SDF Warning: INTERCONNECT from sub_73.U1.Z to U570.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1225,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2116
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U738"
+  SDF Warning: The path from U738.ZN to sub_72.U67.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2119
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U731"
+  SDF Warning: The path from U731.ZN to sub_72.U65.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2122
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U728"
+  SDF Warning: The path from U728.ZN to sub_72.U63.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2125
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U725"
+  SDF Warning: The path from U725.ZN to sub_72.U61.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2128
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U718"
+  SDF Warning: The path from U718.ZN to sub_72.U59.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2131
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U714"
+  SDF Warning: The path from U714.ZN to sub_72.U57.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2134
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U711"
+  SDF Warning: The path from U711.ZN to sub_72.U55.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2137
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U708"
+  SDF Warning: The path from U708.ZN to sub_72.U53.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2140
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U700"
+  SDF Warning: The path from U700.ZN to sub_72.U51.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2143
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U695"
+  SDF Warning: The path from U695.ZN to sub_72.U49.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2146
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U690"
+  SDF Warning: The path from U690.ZN to sub_72.U47.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2149
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U685"
+  SDF Warning: The path from U685.ZN to sub_72.U45.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2152
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U681"
+  SDF Warning: The path from U681.ZN to sub_72.U43.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2155
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U676"
+  SDF Warning: The path from U676.ZN to sub_72.U41.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2158
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U671"
+  SDF Warning: The path from U671.ZN to sub_72.U39.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2161
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U666"
+  SDF Warning: The path from U666.ZN to sub_72.U37.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2164
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U659"
+  SDF Warning: The path from U659.ZN to sub_72.U35.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2167
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U652"
+  SDF Warning: The path from U652.ZN to sub_72.U33.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2170
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U646"
+  SDF Warning: The path from U646.ZN to sub_72.U31.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2173
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U641"
+  SDF Warning: The path from U641.ZN to sub_72.U29.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2176
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U636"
+  SDF Warning: The path from U636.ZN to sub_72.U27.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2179
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U631"
+  SDF Warning: The path from U631.ZN to sub_72.U25.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2180
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U628"
+  SDF Warning: The path from U628.ZN to sub_72.U24.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2227
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U707"
+  SDF Warning: The path from U707.ZN to sub_73.U67.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2232
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U699"
+  SDF Warning: The path from U699.ZN to sub_73.U64.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2235
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U694"
+  SDF Warning: The path from U694.ZN to sub_73.U62.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2238
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U689"
+  SDF Warning: The path from U689.ZN to sub_73.U60.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2241
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U684"
+  SDF Warning: The path from U684.ZN to sub_73.U58.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2242
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U680"
+  SDF Warning: The path from U680.ZN to sub_73.U57.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2245
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U675"
+  SDF Warning: The path from U675.ZN to sub_73.U55.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2250
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U669"
+  SDF Warning: The path from U669.ZN to sub_73.U52.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2253
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U664"
+  SDF Warning: The path from U664.ZN to sub_73.U50.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2254
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U658"
+  SDF Warning: The path from U658.ZN to sub_73.U49.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2257
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U651"
+  SDF Warning: The path from U651.ZN to sub_73.U47.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2260
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U645"
+  SDF Warning: The path from U645.ZN to sub_73.U45.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2263
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U640"
+  SDF Warning: The path from U640.ZN to sub_73.U43.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2266
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U635"
+  SDF Warning: The path from U635.ZN to sub_73.U41.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2269
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U630"
+  SDF Warning: The path from U630.ZN to sub_73.U39.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2272
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U625"
+  SDF Warning: The path from U625.ZN to sub_73.U37.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2275
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U623"
+  SDF Warning: The path from U623.ZN to sub_73.U35.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2278
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U621"
+  SDF Warning: The path from U621.ZN to sub_73.U33.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2281
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U619"
+  SDF Warning: The path from U619.ZN to sub_73.U31.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2284
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U617"
+  SDF Warning: The path from U617.ZN to sub_73.U29.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2287
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U615"
+  SDF Warning: The path from U615.ZN to sub_73.U27.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2290
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U612"
+  SDF Warning: The path from U612.ZN to sub_73.U25.I doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2335
+module: CKND1BWP16P90LVT, "instance: testbench.test_module.U609"
+  SDF Warning: The path from U609.ZN to sub_73.U2.I doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2416
+module: DFQD2BWP16P90LVT, "instance: testbench.test_module.s1_mb_aligned_reg_0_"
+  SDF Warning: INTERCONNECT from s1_mb_aligned_reg_0_.Q to sub_83.U80.I has 
+  Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1213,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2676
+module: AN2D1BWP16P90LVT, "instance: testbench.test_module.sub_72.U22"
+  SDF Warning: INTERCONNECT from sub_72.U22.Z to U359.A1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1238,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2772
+module: DFQD2BWP16P90LVT, "instance: testbench.test_module.s1_mb_aligned_reg_0_"
+  SDF Warning: INTERCONNECT from s1_mb_aligned_reg_0_.Q to U312.A2 has 
+  Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1210,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 2774
+module: DFQD2BWP16P90LVT, "instance: testbench.test_module.s1_mb_aligned_reg_0_"
+  SDF Warning: The path from s1_mb_aligned_reg_0_.Q to U312.B2 doesn't have a 
+  simple wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 3025
+module: XNR2D1BWP16P90LVT, "instance: testbench.test_module.sub_110.U9"
+  SDF Warning: The path from sub_110.U9.ZN to U211.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 3027
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.sub_110.U2_1"
+  SDF Warning: The path from sub_110.U2_1.S to U210.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 3029
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.sub_110.U2_2"
+  SDF Warning: The path from sub_110.U2_2.S to U209.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 3031
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.sub_110.U2_3"
+  SDF Warning: The path from sub_110.U2_3.S to U208.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 3033
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.sub_110.U2_4"
+  SDF Warning: The path from sub_110.U2_4.S to U207.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 3035
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.sub_110.U2_5"
+  SDF Warning: The path from sub_110.U2_5.S to U206.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 3037
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.sub_110.U2_6"
+  SDF Warning: The path from sub_110.U2_6.S to U205.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 3039
+module: XOR3D2BWP16P90LVT, "instance: testbench.test_module.sub_110.U2_7"
+  SDF Warning: The path from sub_110.U2_7.Z to U204.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/timing.sdf, 3045
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_114.U38"
+  SDF Warning: INTERCONNECT from add_114.U38.Z to U192.B1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_4/Area/round2/netlist.v:1185,
+  delay will still be annotated.
+
+
+          Total errors: 0
+          Total warnings: 142
+   ***    SDF annotation completed: Mon Oct  5 20:39:20 2026
+
+

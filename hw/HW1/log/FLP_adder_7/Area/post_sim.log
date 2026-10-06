@@ -1,0 +1,246 @@
+$ vcs -R -debug_access+all +full64 +access+r -sverilog -top testbench -o /MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_adder_7/Area/simv +incdir+/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_adder_7/Area -error=noMPD +neg_tchk +vcs+fsdbon +fsdb+mda +fsdbfile+wave.fsdb /MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/netlist.v /cad/CBDK/ADFP/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/VERILOG/N16ADFP_StdCell.v
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+            Version V-2023.12 -- Mon Oct  5 20:46:10 2026
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '/MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v'
+Parsing included file 'run_config.vh'.
+Back to file '/MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v'.
+Parsing design file '/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/netlist.v'
+Parsing design file '/cad/CBDK/ADFP/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/VERILOG/N16ADFP_StdCell.v'
+Top Level Modules:
+       testbench
+TimeScale is 1 ns / 1 fs
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/timing.sdf"
+   ***    Annotation scope: testbench.test_module
+   ***    SDF Annotator log file: "sdf_annotation.log"
+   ***    MTM selection: "MAXIMUM"
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Mon Oct  5 20:46:11 2026
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/timing.sdf, 1117
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_127.U28"
+  SDF Warning: INTERCONNECT from add_127.U28.Z to U866.I has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/netlist.v:1650,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/timing.sdf, 1120
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_127.U29"
+  SDF Warning: INTERCONNECT from add_127.U29.Z to U865.B1 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/netlist.v:1650,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/timing.sdf, 1130
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_127.U30"
+  SDF Warning: INTERCONNECT from add_127.U30.Z to U863.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/netlist.v:1650,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/timing.sdf, 1136
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_127.U31"
+  SDF Warning: INTERCONNECT from add_127.U31.Z to U861.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/netlist.v:1650,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/timing.sdf, 1142
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_127.U32"
+  SDF Warning: INTERCONNECT from add_127.U32.Z to U859.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/netlist.v:1650,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/timing.sdf, 1148
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_127.U33"
+  SDF Warning: INTERCONNECT from add_127.U33.Z to U857.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/netlist.v:1650,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/timing.sdf, 1154
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_127.U34"
+  SDF Warning: INTERCONNECT from add_127.U34.Z to U855.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/netlist.v:1650,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/timing.sdf, 1160
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_127.U35"
+  SDF Warning: INTERCONNECT from add_127.U35.Z to U853.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/netlist.v:1650,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/timing.sdf, 1166
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_127.U36"
+  SDF Warning: INTERCONNECT from add_127.U36.Z to U851.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/netlist.v:1650,
+  delay will still be annotated.
+
+All future warnings not reported; use +sdfverbose to report them.
+See also the log file: sdf_annotation.log
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/timing.sdf, 1172
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_127.U37"
+  SDF Warning: INTERCONNECT from add_127.U37.Z to U849.B2 has Instance at 
+  /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/netlist.v:1650,
+  delay will still be annotated.
+
+
+          Total errors: 0
+          Total warnings: 151
+   ***    SDF annotation completed: Mon Oct  5 20:46:11 2026
+
+
+Starting vcs inline pass...
+63 modules and 3 UDPs read.
+recompiling module testbench
+recompiling module FLP_adder_DW01_add_2
+recompiling module FLP_adder_DW01_sub_0
+recompiling module FLP_adder_DW01_sub_2
+recompiling module FLP_adder_DW01_add_3
+recompiling module FLP_adder_DW01_sub_3
+recompiling module FLP_adder_DW01_sub_4
+recompiling module FLP_adder_DW01_sub_5
+recompiling module FLP_adder_DW01_sub_6
+recompiling module FLP_adder
+recompiling module AN2D1BWP16P90
+recompiling module AN2D1BWP16P90LVT
+recompiling module AN3D1BWP16P90LVT
+recompiling module AN4D1BWP16P90LVT
+recompiling module AO21D1BWP16P90LVT
+recompiling module AO22D1BWP16P90LVT
+recompiling module AOI211D1BWP16P90
+recompiling module AOI21D1BWP16P90
+recompiling module AOI221D1BWP16P90LVT
+recompiling module AOI22D1BWP16P90LVT
+recompiling module AOI31D1BWP16P90LVT
+recompiling module AOI32D1BWP16P90
+recompiling module BUFFD1BWP16P90LVT
+recompiling module CKND1BWP16P90LVT
+recompiling module DFQD2BWP16P90LVT
+recompiling module FA1D1BWP16P90LVT
+recompiling module FA1D2BWP16P90LVT
+recompiling module IND2D1BWP16P90LVT
+recompiling module IND3D1BWP16P90LVT
+recompiling module IND4D1BWP16P90LVT
+recompiling module INR2D1BWP16P90
+recompiling module INR2D1BWP16P90LVT
+recompiling module INR3D1BWP16P90LVT
+recompiling module INR4D1BWP16P90LVT
+recompiling module MAOI22D1BWP16P90
+recompiling module MUX2D1BWP16P90LVT
+recompiling module MUX2ND2BWP16P90LVT
+recompiling module MUX3D1BWP16P90LVT
+recompiling module ND2D1BWP16P90LVT
+recompiling module ND3D1BWP16P90LVT
+recompiling module ND4D1BWP16P90LVT
+recompiling module NR2D1BWP16P90LVT
+recompiling module NR3D1BWP16P90LVT
+recompiling module NR4D1BWP16P90LVT
+recompiling module OAI211D1BWP16P90LVT
+recompiling module OAI221D1BWP16P90
+recompiling module OAI221D1BWP16P90LVT
+recompiling module OAI22D1BWP16P90
+recompiling module OAI22D1BWP16P90LVT
+recompiling module OAI31D1BWP16P90LVT
+50 of 63 modules done
+recompiling module OAI32D1BWP16P90
+recompiling module OR2D1BWP16P90
+recompiling module OR2D1BWP16P90LVT
+recompiling module OR3D1BWP16P90LVT
+recompiling module OR4D1BWP16P90LVT
+recompiling module TIEHBWP20P90LVT
+recompiling module TIELBWP20P90LVT
+recompiling module XNR2D1BWP16P90
+recompiling module XNR2D1BWP16P90LVT
+recompiling module XOR2D1BWP16P90
+recompiling module XOR2D1BWP16P90LVT
+recompiling module XOR2D4BWP16P90LVT
+recompiling module XOR3D2BWP16P90LVT
+All of 63 modules done
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_adder_7/Area/simv ]; then chmod a-x /MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_adder_7/Area/simv; fi
+g++  -o /MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_adder_7/Area/simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/usr/cad/synopsys/vcs/2023.12/linux/lib -L/usr/cad/synopsys/vcs/2023.12/linux/lib  -Wl,-rpath-link=./   objs/amcQw_d.o   _11713_archive_1.so objs/udps/m6zeg.o objs/udps/JvR1L.o objs/udps/df3ii.o   SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2023.12/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /usr/cad/synopsys/vcs/2023.12/linux/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2023.12/share/PLI/VCS/LINUX/pli.a /usr/cad/synopsys/vcs/2023.12/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_adder_7/Area/simv up to date
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version V-2023.12; Runtime version V-2023.12;  Oct  5 20:46 2026
+Doing SDF annotation ...... Done
+*Verdi* Loading libsscore_vcs202312.so
+FSDB Dumper for VCS, Release Verdi_V-2023.12, Linux, 11/15/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'wave.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+HW1_SDF_ANNOTATION_REQUESTED /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_adder_7/Area/round6/timing.sdf
+*Verdi* : Begin traversing the scope (testbench), layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+-----------------------------------------
+
+-              FLP_adder_7              -
+
+-----------------------------------------
+
+-----------------------------------------
+
+Score: 100
+
+Avg error: 5.884856e-09
+
+-----------------------------------------
+
+$finish called from file "/MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v", line 296.
+$finish at simulation time            535000000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 535000000 fs
+CPU Time:      0.690 seconds;       Data structure size:   0.3Mb
+Mon Oct  5 20:46:14 2026
+CPU time: 1.612 seconds to compile + .540 seconds to elab + .546 seconds to link + .746 seconds in simulation

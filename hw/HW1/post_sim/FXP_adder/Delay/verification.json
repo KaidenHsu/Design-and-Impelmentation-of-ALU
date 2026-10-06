@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "design": "FXP_adder",
+  "verification_id": "9b324b544acaa31c13d501c7693b4e2cf1aed59a65d47a22fb39687d80614fd8",
+  "synthesis_id": "8c478eeda4262ff312707c2e2efb2a9cf1a01b7c92dad5a684f8f46b31506ef7",
+  "schedule": "TA_original",
+  "pipeline_stages": 1,
+  "period_ns": "5.0",
+  "path": "post_sim/FXP_adder/Delay",
+  "log": "log/FXP_adder/Delay/post_sim.log",
+  "round": 4,
+  "synthesis_period_ns": "0.089",
+  "checked": 100,
+  "errors": 0,
+  "waveform": "post_sim/FXP_adder/Delay/wave.fsdb",
+  "wave_format": "fsdb",
+  "sdf_warnings": {}
+}

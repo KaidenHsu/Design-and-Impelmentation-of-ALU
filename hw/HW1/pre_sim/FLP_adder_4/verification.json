@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "design": "FLP_adder_4",
+  "verification_id": "d5c0e5956115daea090e6202ce03ae1607278bb3ae9579c0d56823b6cd4d5130",
+  "synthesis_id": "6071cb71e7c5fdd837e142fb3079b3995e820a8eab615ca70a801532305e96a1",
+  "schedule": "TA_original",
+  "pipeline_stages": 4,
+  "period_ns": "5",
+  "path": "pre_sim/FLP_adder_4",
+  "log": "log/FLP_adder_4/pre_sim.log",
+  "round": null,
+  "checked": 100,
+  "errors": 0,
+  "waveform": "pre_sim/FLP_adder_4/wave.fsdb",
+  "wave_format": "fsdb"
+}

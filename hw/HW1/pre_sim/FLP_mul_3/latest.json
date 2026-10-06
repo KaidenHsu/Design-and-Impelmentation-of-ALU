@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "design": "FLP_mul_3",
+  "verification_id": "aa9f08b511b5eea8aef521eec77745ed489b1b0406ea30cf76f0d990780c7dc5",
+  "synthesis_id": "9ab782ebdb84c2ad44d2847ed7bc7963ce9dba5f26868bc39508cb5552936c03",
+  "schedule": "TA_original",
+  "pipeline_stages": 3,
+  "period_ns": "5",
+  "path": "pre_sim/FLP_mul_3",
+  "log": "log/FLP_mul_3/pre_sim.log",
+  "round": null,
+  "checked": 100,
+  "errors": 0,
+  "waveform": "pre_sim/FLP_mul_3/wave.fsdb",
+  "wave_format": "fsdb"
+}

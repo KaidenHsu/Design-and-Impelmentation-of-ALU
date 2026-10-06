@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "status": "failed",
+  "design": "FLP_mul_3",
+  "verification_id": "a52a329bcd7ed184fb35eceece777881ce897862254fb92734b8555dc9b10dac",
+  "synthesis_id": "9ab782ebdb84c2ad44d2847ed7bc7963ce9dba5f26868bc39508cb5552936c03",
+  "schedule": "TA_original",
+  "pipeline_stages": 3,
+  "period_ns": "5.0",
+  "path": "post_sim/FLP_mul_3/Delay",
+  "log": "log/FLP_mul_3/Delay/post_sim.log",
+  "round": 3,
+  "synthesis_period_ns": "0.385",
+  "error": "Unaccepted SDF annotation/timing diagnostic: Warning-[SDFCOM_NL] Negative Limit Not Allowed\n/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Delay/round3/timing.sdf, 8540\nmodule: DFCNQD2BWP16P90LVT, \"instance: testbench.test_module.s2_md_raw_reg_34_\"\n  SDF Warning: $recovery/$removal timing checks does not support negative \n  values.\n  Please use; see /MasterClass/M143010027_ALU/Hws/HW1/post_sim/FLP_mul_3/Delay/sdf_annotation.log"
+}

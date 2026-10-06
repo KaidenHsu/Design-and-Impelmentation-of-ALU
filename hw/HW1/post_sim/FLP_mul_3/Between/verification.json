@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "design": "FLP_mul_3",
+  "verification_id": "a52a329bcd7ed184fb35eceece777881ce897862254fb92734b8555dc9b10dac",
+  "synthesis_id": "9ab782ebdb84c2ad44d2847ed7bc7963ce9dba5f26868bc39508cb5552936c03",
+  "schedule": "TA_original",
+  "pipeline_stages": 3,
+  "period_ns": "5.0",
+  "path": "post_sim/FLP_mul_3/Between",
+  "log": "log/FLP_mul_3/Between/post_sim.log",
+  "round": 1,
+  "synthesis_period_ns": "1.129",
+  "checked": 100,
+  "errors": 0,
+  "waveform": "post_sim/FLP_mul_3/Between/wave.fsdb",
+  "wave_format": "fsdb",
+  "sdf_warnings": {
+    "SDFCOM_SWC": 89
+  }
+}

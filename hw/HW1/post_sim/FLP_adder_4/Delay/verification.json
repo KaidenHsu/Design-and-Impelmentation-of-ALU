@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "design": "FLP_adder_4",
+  "verification_id": "3025b7a7fb946cd52b5579334e442de4f741457821f78ba27da1de1d03a90f48",
+  "synthesis_id": "6071cb71e7c5fdd837e142fb3079b3995e820a8eab615ca70a801532305e96a1",
+  "schedule": "TA_original",
+  "pipeline_stages": 4,
+  "period_ns": "5.0",
+  "path": "post_sim/FLP_adder_4/Delay",
+  "log": "log/FLP_adder_4/Delay/post_sim.log",
+  "round": 4,
+  "synthesis_period_ns": "0.261",
+  "checked": 100,
+  "errors": 0,
+  "waveform": "post_sim/FLP_adder_4/Delay/wave.fsdb",
+  "wave_format": "fsdb",
+  "sdf_warnings": {
+    "SDFCOM_SWC": 194,
+    "SDFCOM_IWSBA": 118
+  }
+}

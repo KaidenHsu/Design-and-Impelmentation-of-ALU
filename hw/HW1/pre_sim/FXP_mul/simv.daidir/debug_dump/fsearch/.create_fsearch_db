@@ -1,0 +1,9 @@
+#!/bin/sh -h 
+PYTHONHOME=/usr/cad/synopsys/vcs/2023.12/etc/search/pyh
+export PYTHONHOME
+PYTHONPATH=/usr/cad/synopsys/vcs/2023.12/linux/lib/pylib27
+export PYTHONPATH
+LD_LIBRARY_PATH=/usr/cad/synopsys/vcs/2023.12/linux/lib:/usr/cad/synopsys/vcs/2023.12/linux/lib/pylib27
+export LD_LIBRARY_PATH
+/usr/cad/synopsys/vcs/2023.12/linux/bin/vcsfind_create_index.exe  -z  "/MasterClass/M143010027_ALU/Hws/HW1/pre_sim/FXP_mul/simv.daidir/debug_dump/fsearch/./idents_upwdJi.xml.gz" "/MasterClass/M143010027_ALU/Hws/HW1/pre_sim/FXP_mul/simv.daidir/debug_dump/fsearch/./idents_tapi.xml.gz" -o "/MasterClass/M143010027_ALU/Hws/HW1/pre_sim/FXP_mul/simv.daidir/debug_dump/fsearch/fsearch.db_tmp"
+\mv "/MasterClass/M143010027_ALU/Hws/HW1/pre_sim/FXP_mul/simv.daidir/debug_dump/fsearch/fsearch.db_tmp" "/MasterClass/M143010027_ALU/Hws/HW1/pre_sim/FXP_mul/simv.daidir/debug_dump/fsearch/fsearch.db"

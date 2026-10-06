@@ -1,0 +1,1078 @@
+$ env HW1_DESIGN=FLP_mul HW1_OPT=Delay HW1_OUT=/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul/Delay/round2 HW1_PERIOD=0.459 HW1_ROUND=2 HW1_RTL_LIST=/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul/Delay/round2/rtl_files.txt HW1_TIMING_REVIEWED=0 dcnxt_shell -f dc.tcl
+
+                            Design Compiler (R) NXT 
+
+                 Version T-2022.03 for linux64 - Feb 22, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+# Based on ALU_HW1_TA_dc.tcl. Run one design/period per DC process.
+# Copied into each round and invoked there: dcnxt_shell -f dc.tcl.
+# metadata
+set Company "NSYSU2026ALU"
+NSYSU2026ALU
+set Designer "Kaiden Hsu"
+Kaiden Hsu
+# Pipeline pin patterns include significand, exponent and sign register banks.
+# FLP_mul_3 has two internal register banks and a combinational output stage.
+set stage_maps [dict create]
+dict set stage_maps FLP_mul_3 [list \
+    [dict create from INPUTS to {s1_*_reg*/D}] \
+    [dict create from {s1_*_reg*/Q*} to {s2_*_reg*/D}] \
+    [dict create from {s2_*_reg*/Q*} to OUTPUTS]]
+FLP_mul_3 {{from INPUTS to s1_*_reg*/D} {from s1_*_reg*/Q* to s2_*_reg*/D} {from s2_*_reg*/Q* to OUTPUTS}}
+# Adders use s<N>_ register banks for every data and sideband signal.
+dict set stage_maps FLP_adder_4 [list \
+    [dict create from INPUTS to {s1_*_reg*/D}] \
+    [dict create from {s1_*_reg*/Q*} to {s2_*_reg*/D}] \
+    [dict create from {s2_*_reg*/Q*} to {s3_*_reg*/D}] \
+    [dict create from {s3_*_reg*/Q*} to OUTPUTS]]
+FLP_mul_3 {{from INPUTS to s1_*_reg*/D} {from s1_*_reg*/Q* to s2_*_reg*/D} {from s2_*_reg*/Q* to OUTPUTS}} FLP_adder_4 {{from INPUTS to s1_*_reg*/D} {from s1_*_reg*/Q* to s2_*_reg*/D} {from s2_*_reg*/Q* to s3_*_reg*/D} {from s3_*_reg*/Q* to OUTPUTS}}
+dict set stage_maps FLP_adder_7 [list \
+    [dict create from INPUTS to {s1_*_reg*/D}] \
+    [dict create from {s1_*_reg*/Q*} to {s2_*_reg*/D}] \
+    [dict create from {s2_*_reg*/Q*} to {s3_*_reg*/D}] \
+    [dict create from {s3_*_reg*/Q*} to {s4_*_reg*/D}] \
+    [dict create from {s4_*_reg*/Q*} to {s5_*_reg*/D}] \
+    [dict create from {s5_*_reg*/Q*} to {s6_*_reg*/D}] \
+    [dict create from {s6_*_reg*/Q*} to OUTPUTS]]
+FLP_mul_3 {{from INPUTS to s1_*_reg*/D} {from s1_*_reg*/Q* to s2_*_reg*/D} {from s2_*_reg*/Q* to OUTPUTS}} FLP_adder_4 {{from INPUTS to s1_*_reg*/D} {from s1_*_reg*/Q* to s2_*_reg*/D} {from s2_*_reg*/Q* to s3_*_reg*/D} {from s3_*_reg*/Q* to OUTPUTS}} FLP_adder_7 {{from INPUTS to s1_*_reg*/D} {from s1_*_reg*/Q* to s2_*_reg*/D} {from s2_*_reg*/Q* to s3_*_reg*/D} {from s3_*_reg*/Q* to s4_*_reg*/D} {from s4_*_reg*/Q* to s5_*_reg*/D} {from s5_*_reg*/Q* to s6_*_reg*/D} {from s6_*_reg*/Q* to OUTPUTS}}
+# Read an optional launcher setting, retaining the course default if absent.
+proc env_or {name default} {
+    if {[info exists ::env($name)]} {
+        return $::env($name)
+    }
+    return $default
+}
+# Required settings identify this design, strategy and isolated round.
+proc need_env {name} {
+    if {![info exists ::env($name)]} {
+        error "Missing environment variable $name; use scripts/run.sh"
+    }
+    return $::env($name)
+}
+# Some DC commands return 0 on failure instead of raising a Tcl exception.
+proc checked {script} {
+    set result [uplevel 1 $script]
+    if {$result eq "0"} {
+        error "Command returned failure: $script"
+    }
+    return $result
+}
+# Convert time to ns and power to W for machine-readable measurements.
+proc unit_scale {number suffix kind} {
+    set scales [dict create \
+        s 1e9 \
+        ms 1e6 \
+        us 1e3 \
+        ns 1 \
+        ps 1e-3 \
+        fs 1e-6 \
+        W 1 \
+        mW 1e-3 \
+        uW 1e-6 \
+        nW 1e-9 \
+        pW 1e-12]
+
+    if {![dict exists $scales $suffix]} {
+        error "Unsupported $kind unit: $suffix"
+    }
+    return [expr {double($number) * [dict get $scales $suffix]}]
+}
+# Extract reported data arrival time and its path endpoints.
+proc timing_arrival {filename} {
+    # Read the positive arrival line, not the negative slack-subtraction line.
+    # Reports can contain one worst path per group; retain the largest arrival.
+    set fd [open $filename r]
+    set text [read $fd]
+    close $fd
+    set result ""
+    foreach block [split [string map [list "Startpoint:" "\u0001"] $text] "\u0001"] {
+        if {[regexp -line \
+            {^[ \t]*data arrival time[ \t]+([0-9]+\.?[0-9]*(?:[eE][+-]?[0-9]+)?)[ \t\r]*$} $block all number]} {
+            if {$result eq "" || $number > [dict get $result delay]} {
+                regexp {^[ \t]*([^ \t\n]+)} $block all start
+                regexp -line {^[ \t]*Endpoint:[ \t]+([^ \t\n]+)} $block all end
+                set result [dict create delay $number start $start end $end]
+            }
+        }
+    }
+    if {$result eq ""} {
+        error "No positive data arrival time in $filename"
+    }
+    return $result
+}
+# Resolve stage boundaries to data ports or register pins, excluding clk/rst.
+proc boundary {pattern} {
+    if {$pattern eq "INPUTS"} {
+        set ports [all_inputs]
+        foreach name {clk rst} {
+            set control [get_ports -quiet $name]
+            if {[sizeof_collection $control]} {
+                set ports [remove_from_collection $ports $control]
+            }
+        }
+        return $ports
+    }
+    if {$pattern eq "OUTPUTS"} {
+        return [all_outputs]
+    }
+    return [get_pins -hierarchical -quiet $pattern]
+}
+# Read one numeric area field from the original DC report text.
+proc numeric_area {text label} {
+    set pattern [format {%s\s*:\s*([0-9.eE+-]+)} $label]
+    if {![regexp -- $pattern $text all number]} {
+        error "Missing area field: $label"
+    }
+    return $number
+}
+proc main {} {
+    global stage_maps
+
+    # [Paths, Top Module and Clock Configuration]
+    # Retain the TA names. Path_Top is this variant's RTL directory; Path_Syn
+    # is this attempt's gate_level directory. Clk_period is in DC library units.
+    set HW1_Root [file normalize [need_env HW1_ROOT]]
+    set Design [need_env HW1_DESIGN]
+    set Optimization [need_env HW1_OPT]
+    set Path_Top [file join $HW1_Root RTL $Design]
+    set Path_Syn [file normalize [need_env HW1_OUT]]
+    set Clk_pin "clk"
+    set Clk_period_ns [need_env HW1_PERIOD]
+
+    # Use the TA basename variable for the Verilog export. Other artifact names
+    # stay fixed because post-sim and result collection expect those filenames.
+    set Dump_file_name "netlist"
+
+    if {$Optimization ni {Area Delay Between}} {
+        error "Unknown optimization $Optimization"
+    }
+    if {![string is double -strict $Clk_period_ns] || $Clk_period_ns <= 0} {
+        error "Invalid period"
+    }
+
+    # Variants reuse top-module names but compile from separate RTL folders.
+    set configurations [dict create \
+        FXP_adder {FXP_adder 1} \
+        FXP_mul {FXP_mul 1} \
+        FLP_adder {FLP_adder 1} \
+        FLP_adder_7 {FLP_adder 7} \
+        FLP_adder_4 {FLP_adder 4} \
+        FLP_mul {FLP_mul 1} \
+        FLP_mul_3 {FLP_mul 3}]
+    if {![dict exists $configurations $Design]} {
+        error "Unknown design $Design"
+    }
+    lassign [dict get $configurations $Design] Top stages
+
+    set expected [file normalize [file join \
+        $HW1_Root gate_level $Design $Optimization round[need_env HW1_ROUND]]]
+    if {$Path_Syn ne $expected} {
+        error "Output path does not match the configured design/optimization/round"
+    }
+    file mkdir $Path_Syn [file join $Path_Syn work]
+    define_design_lib WORK -path [file join $Path_Syn work]
+
+    # [Library and Tool Setup: Original TA Settings]
+    set library_root [env_or HW1_LIBRARY_ROOT \
+        /cad/CBDK/ADFP/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/CCS]
+    set ::search_path [concat [list $library_root $Path_Top] $::search_path]
+    set ::target_library [list \
+        N16ADFP_StdCellss0p72vm40c_ccs.db \
+        N16ADFP_StdCellff0p88v125c_ccs.db]
+    foreach db $::target_library {
+        if {![file exists [file join $library_root $db]]} {
+            error "Missing library [file join $library_root $db]"
+        }
+    }
+
+    set ::link_library [concat [list *] $::target_library [list dw_foundation.sldb]]
+    set ::symbol_library {tsmc040.sdb generic.sdb}
+    set ::synthetic_library dw_foundation.sldb
+    set ::hdlin_translate_off_skip_text "TRUE"
+    set ::edifout_netlist_only "TRUE"
+    set ::verilogout_no_tri true
+    set ::hdlin_enable_presto_for_vhdl "TRUE"
+
+    # Original TA shell preferences; these do not constrain synthesis timing.
+    set ::sh_enable_line_editing true
+    set ::sh_line_editing_mode emacs
+    history keep 100
+    alias h history
+
+    # [Read Design File]
+    # Use the launcher's ordered source list instead of the TA's example paths.
+    # Analyze/elaborate preserves parameter support and round-local WORK isolation.
+    set fd [open [need_env HW1_RTL_LIST] r]
+    set files [split [string trim [read $fd]] \n]
+    close $fd
+    foreach source $files {
+        if {![file isfile $source]} {
+            error "Missing RTL: $source"
+        }
+        set ::search_path [concat [list [file dirname $source]] $::search_path]
+        set format [expr {[file extension $source] eq ".sv" ? "sverilog" : "verilog"}]
+        checked [list analyze -format $format -library WORK $source]
+    }
+    checked [list elaborate $Top -library WORK]
+    current_design $Top
+    checked {link}
+    checked {check_design}
+
+    # [Time Units]
+    # Save the original unit report, then convert the launcher's ns clock period.
+    redirect -variable units {report_units}
+    set fd [open [file join $Path_Syn units_report.txt] w]
+    puts $fd $units
+    close $fd
+
+    # In "Time_unit : 1.0e-09 Second(ns)", the number multiplies Second.
+    # The parenthesized ns is a label; do not convert the value twice.
+    set unit_pattern {^\s*Time(?:_|\s+)units?\s*:\s*([0-9.eE+-]+)\s*(Seconds?|[munpf]?s)(?:\([^)]*\))?\s*$}
+    if {![regexp -nocase -line $unit_pattern $units match un suffix]} {
+        error "Cannot determine library time unit; inspect units_report.txt"
+    }
+    set suffix [string tolower $suffix]
+    if {$suffix in {second seconds}} {
+        set suffix s
+    }
+    set time_ns [unit_scale $un $suffix time]
+    if {$time_ns <= 0} {
+        error "Library time unit must be positive"
+    }
+    puts "HW1_DC_UNITS: one library time unit = $time_ns ns"
+    set Clk_period [expr {double($Clk_period_ns) / $time_ns}]
+
+    # [Setting Clock Constraints]
+    # Combinational variants use the TA's virtual-clock/max-delay alternative.
+    # Pipelines use the physical clk port and the original clock-network settings.
+    if {$stages == 1} {
+        set_max_delay $Clk_period -from [all_inputs] -to [all_outputs]
+        create_clock -name $Clk_pin -period $Clk_period
+        set_input_delay 0 -clock $Clk_pin [all_inputs]
+    } else {
+        set Clock_port [get_ports -quiet $Clk_pin]
+        if {![sizeof_collection $Clock_port]} {
+            error "Pipelined top has no $Clk_pin port"
+        }
+        create_clock -name $Clk_pin -period $Clk_period $Clock_port
+        set_fix_hold [get_clocks $Clk_pin]
+        set_dont_touch_network [get_clocks $Clk_pin]
+        set_ideal_network $Clock_port
+        set_input_delay 0 -clock $Clk_pin \
+            [remove_from_collection [all_inputs] $Clock_port]
+    }
+    set_output_delay 0 -clock $Clk_pin [all_outputs]
+
+    # [Setting Design Environment: Original TA Corners and Wire-Load Model]
+    # Do not silently change library corners when refactoring the script.
+    set_operating_conditions \
+        -min_library N16ADFP_StdCellff0p88v125c_ccs -min ff0p88v125c \
+        -max_library N16ADFP_StdCellss0p72vm40c_ccs -max ss0p72vm40c
+    set_wire_load_model -name ZeroWireload -library N16ADFP_StdCellss0p72vm40c_ccs
+    set_wire_load_mode top
+
+    # [Area Optimization and Compile]
+    # Strategies differ by period; retain the same TA compile/max-area commands.
+    set_max_area 0
+    checked {compile}
+
+    # [Change Naming Rule: Original TA Rules]
+    # Escaped brackets keep the literal TA allowed-character set in quoted Tcl.
+    set ::bus_inference_style {%s[%d]}
+    set ::bus_naming_style {%s[%d]}
+    set ::hdlout_internal_busses true
+    change_names -hierarchy -rule verilog
+    define_name_rules name_rule -allowed "A-Z a-z 0-9 _" -max_length 255 -type cell
+    define_name_rules name_rule -allowed "A-Z a-z 0-9 _\[\]" -max_length 255 -type net
+    define_name_rules name_rule -map {{"\\*cell\\*" "cell"}} -case_insensitive
+    change_names -hierarchy -rules name_rule
+    remove_unconnected_ports -blast_buses [get_cells -hierarchical *]
+
+    # [Timing Coverage]
+    # Period tuning requires constrained timing paths. Save all diagnostics.
+    redirect -variable coverage {check_timing}
+    set fd [open [file join $Path_Syn check_timing.txt] w]
+    puts $fd $coverage
+    close $fd
+    puts $coverage
+    if {[regexp -nocase {(Warning:|Error:)[^\n]*(unconstrained|not constrained|no clock|no input delay|no output delay)} $coverage]} {
+        error "Required timing coverage is missing; correct the constraints before tuning"
+    }
+    set coverage_status clean
+    if {[regexp -nocase {Warning:|Error:} $coverage]} {
+        set coverage_status reviewed_with_warnings
+    }
+    if {[regexp -nocase {Warning:|Error:} $coverage] && [env_or HW1_TIMING_REVIEWED 0] ne "1"} {
+        error "check_timing diagnostics require review; see check_timing.txt. Use --input-delays-reviewed only after correcting/reviewing coverage."
+    }
+
+    # [Report Timing]
+    # Restore the TA console report and keep the detailed report file.
+    report_timing -significant_digits 6 -sort_by group
+    redirect -file [file join $Path_Syn timing_report.txt] {
+        report_timing -path full -delay max -significant_digits 6 -sort_by group
+    }
+
+    # Find the worst setup slack across all path groups, not only one group.
+    set worst ""
+    foreach_in_collection group [get_path_groups *] {
+        set paths [get_timing_paths \
+            -group [get_object_name $group] -delay max -max_paths 1 -nworst 1]
+        foreach_in_collection path $paths {
+            set slack [get_attribute $path slack]
+            if {![string is double -strict $slack]} {
+                error "Invalid timing attribute"
+            }
+            if {$worst eq "" || $slack < $worst} {
+                set worst $slack
+            }
+        }
+    }
+    if {$worst eq ""} {
+        error "No constrained max-delay timing paths"
+    }
+
+    # Reported delay follows the TA's data-arrival-time convention.
+    # Slack remains separate and is used only for timing feasibility/tuning.
+    set critical_delay [dict get \
+        [timing_arrival [file join $Path_Syn timing_report.txt]] delay]
+
+    # [Report Area]
+    # Use the documented TA library um2 convention, without guessed scaling.
+    redirect -variable area_text {report_area -hier -nosplit}
+    set fd [open [file join $Path_Syn area_report.txt] w]
+    puts $fd $area_text
+    close $fd
+    set comb [numeric_area $area_text {Combinational area}]
+    set seq [numeric_area $area_text {Noncombinational area}]
+    set total [numeric_area $area_text {Total cell area}]
+
+    # [Report Power]
+    # Keep the TA effort setting and convert explicit report suffixes to W.
+    # Unavailable power fields stay blank rather than becoming invented zeros.
+    set dynamic ""
+    set leakage ""
+    set power ""
+    if {[catch {
+        redirect -variable power_text {report_power -analysis_effort low}
+    } issue]} {
+        puts "WARN: power report unavailable: $issue"
+    } else {
+        set fd [open [file join $Path_Syn power_report.txt] w]
+        puts $fd $power_text
+        close $fd
+        if {[regexp {Total Dynamic Power\s*=\s*([0-9.eE+-]+)\s*([munp]?W)} $power_text all number unit]} {
+            set dynamic [unit_scale $number $unit power]
+        }
+        if {[regexp {Cell Leakage Power\s*=\s*([0-9.eE+-]+)\s*([munp]?W)} $power_text all number unit]} {
+            set leakage [unit_scale $number $unit power]
+        }
+        if {$dynamic ne "" && $leakage ne ""} {
+            set power [expr {$dynamic + $leakage}]
+        } else {
+            puts "WARN: power units/values not extracted; inspect power_report.txt"
+        }
+    }
+
+    # [Each Pipeline Delay]
+    # Actual register-bank boundaries replace the TA's example m1/* ... m7/*.
+    # Full path reports provide evidence; stages.tsv feeds report collection.
+    set sf [open [file join $Path_Syn stages.tsv] w]
+    for {set i 1} {$i <= $stages && $stages > 1} {incr i} {
+        set delay ""
+        set start ""
+        set end ""
+        set status unmapped
+
+        if {[dict exists $stage_maps $Design] && [llength [dict get $stage_maps $Design]] >= $i} {
+            set mapping [lindex [dict get $stage_maps $Design] [expr {$i - 1}]]
+            if {[catch {
+                set from [boundary [dict get $mapping from]]
+                set to [boundary [dict get $mapping to]]
+                if {![sizeof_collection $from] || ![sizeof_collection $to]} {
+                    error "Empty stage boundary"
+                }
+
+                redirect -file [file join $Path_Syn timing_report_stage${i}.txt] {
+                    report_timing -from $from -to $to -path full -delay max \
+                        -nworst 1 -max_paths 1 -significant_digits 6 -sort_by group
+                }
+                set measured [timing_arrival \
+                    [file join $Path_Syn timing_report_stage${i}.txt]]
+                set delay [expr {[dict get $measured delay] * $time_ns}]
+                set start [dict get $measured start]
+                set end [dict get $measured end]
+                set status measured
+            } issue]} {
+                set status invalid
+                puts "WARN: stage $i: $issue"
+                set delay ""
+            }
+        } else {
+            puts "WARN: $Design stage $i mapping is not configured"
+        }
+        puts $sf "$i\t$delay\t$start\t$end\t$status"
+    }
+    close $sf
+
+    # [Write Out]
+    # Keep TA commands/options; fixed filenames maintain the automation interface.
+    checked [list write -hierarchy -format ddc \
+        -output [file join $Path_Syn design.ddc]]
+    checked [list write -format verilog -hierarchy \
+        -output [file join $Path_Syn ${Dump_file_name}.v]]
+    checked [list write_sdf -version 2.1 -context verilog \
+        [file join $Path_Syn timing.sdf]]
+    checked [list write_sdc [file join $Path_Syn constraints.sdc]]
+
+    # [Automation Measurements]
+    # Stable keys feed period tuning/CSV collection. Preserve raw numeric precision.
+    set fd [open [file join $Path_Syn metrics.tsv] w]
+    foreach {key value} [list \
+        schema 1 \
+        period_ns $Clk_period_ns \
+        slack_ns [expr {$worst * $time_ns}] \
+        delay_ns [expr {$critical_delay * $time_ns}] \
+        delay_basis timing_report_data_arrival \
+        time_unit_ns $time_ns \
+        comb_um2 $comb \
+        seq_um2 $seq \
+        total_um2 $total \
+        dynamic_w $dynamic \
+        leakage_w $leakage \
+        power_w $power \
+        power_activity default_estimated \
+        area_units TA_library_um2 \
+        sdf_corner min_typ_max \
+        coverage_status $coverage_status \
+        complete 1] {
+        puts $fd "$key\t$value"
+    }
+    close $fd
+
+    # TA optional example remains disabled; do not introduce clock-gating analysis.
+    # report_clock_gating -gating_elements
+    puts "HW1_DC_COMPLETE: $Design $Optimization period=$Clk_period_ns ns"
+}
+# Give the launcher a reliable exit status and retain complete Tcl error details.
+if {[catch {main} failure options]} {
+    puts stderr "HW1_DC_ERROR: $failure"
+    if {[dict exists $options -errorinfo]} {
+        puts stderr [dict get $options -errorinfo]
+    }
+    exit 1
+}
+Information: Variable '::hdlin_translate_off_skip_text' is obsolete and is being ignored. (INFO-100)
+Information: Variable '::hdlin_enable_presto_for_vhdl' is obsolete and is being ignored. (INFO-100)
+Information: Variable '::hdlin_enable_presto_for_vhdl' is obsolete and is being ignored. (INFO-100)
+Running PRESTO HDLC
+Compiling source file /MasterClass/M143010027_ALU/Hws/HW1/RTL/FLP_mul/FLP_mul.v
+Presto compilation completed successfully.
+Loading db file '/cad/CBDK/ADFP/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/CCS/N16ADFP_StdCellss0p72vm40c_ccs.db'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/cad/CBDK/ADFP/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/CCS/N16ADFP_StdCellff0p88v125c_ccs.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/standard.sldb'
+  Loading link library 'N16ADFP_StdCellss0p72vm40c_ccs'
+  Loading link library 'N16ADFP_StdCellff0p88v125c_ccs'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (FLP_mul)
+Elaborated 1 design.
+Current design is now 'FLP_mul'.
+Current design is 'FLP_mul'.
+
+  Linking design 'FLP_mul'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  FLP_mul                     /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul/Delay/round2/FLP_mul.db
+  N16ADFP_StdCellss0p72vm40c_ccs (library) /cad/CBDK/ADFP/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/CCS/N16ADFP_StdCellss0p72vm40c_ccs.db
+  N16ADFP_StdCellff0p88v125c_ccs (library) /cad/CBDK/ADFP/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/CCS/N16ADFP_StdCellff0p88v125c_ccs.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/2022.03/libraries/syn/dw_foundation.sldb
+
+HW1_DC_UNITS: one library time unit = 1.0 ns
+Warning: Creating virtual clock named 'clk' with no sources. (UID-348)
+Using operating conditions 'ss0p72vm40c' found in library 'N16ADFP_StdCellss0p72vm40c_ccs'.
+Using operating conditions 'ff0p88v125c' found in library 'N16ADFP_StdCellff0p88v125c_ccs'.
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler NXT                                                               |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 13                                     |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 0                                      |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch cells                              | 4                                      |
+| Number of Dont Touch nets                               | 0                                      |
+| Number of size only cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+
+Warning: Operating condition ss0p72vm40c set on design FLP_mul has different process,
+voltage and temperatures parameters than the parameters at which target library 
+N16ADFP_StdCellff0p88v125c_ccs is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'FLP_mul'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Building model 'DW01_NAND2'
+  Processing 'DW01_NAND2'
+  Building model 'DW01_add_width8' (rpl)
+  Processing 'DW01_add_width8'
+  Building model 'DW01_add_width25' (rpl)
+  Processing 'DW01_add_width25'
+  Building model 'DW01_sub_width8' (rpl)
+  Processing 'DW01_sub_width8'
+  Mapping 'FLP_mul_DW_mult_uns_0'
+  Processing 'FLP_mul_DW01_add_0'
+  Processing 'FLP_mul_DW01_add_1'
+  Processing 'FLP_mul_DW01_add_2'
+  Processing 'FLP_mul_DW01_sub_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:24    1168.7      0.07       1.6      17.5                          
+    0:00:24    1168.7      0.07       1.6      17.5                          
+    0:00:24    1168.7      0.07       1.6      17.5                          
+    0:00:24    1168.7      0.07       1.6      17.5                          
+    0:00:24    1168.7      0.07       1.6      17.5                          
+    0:00:25     757.3      0.23       6.0      17.5                          
+    0:00:26     754.2      0.23       6.3      17.5                          
+    0:00:26     753.4      0.18       4.7      17.5                          
+    0:00:27     752.4      0.15       3.7      17.5                          
+    0:00:27     754.7      0.12       3.0      17.5                          
+    0:00:27     755.0      0.12       3.0      17.5                          
+    0:00:27     755.3      0.12       2.8      17.5                          
+    0:00:28     754.9      0.11       2.8      17.5                          
+    0:00:28     757.0      0.11       2.6      17.5                          
+    0:00:28     756.0      0.11       2.6      17.5                          
+    0:00:29     757.0      0.11       2.5      17.5                          
+    0:00:29     760.6      0.11       2.5      17.5                          
+    0:00:29     760.9      0.10       2.3      17.5                          
+    0:00:29     762.8      0.10       2.5      17.5                          
+    0:00:29     762.9      0.10       2.3      17.5                          
+    0:00:29     764.1      0.10       2.3      17.5                          
+    0:00:30     764.3      0.10       2.2      17.5                          
+    0:00:30     765.3      0.10       2.2      17.5                          
+    0:00:30     765.4      0.10       2.2      17.5                          
+    0:00:30     765.4      0.10       2.2      17.5                          
+    0:00:30     765.4      0.10       2.2      17.5                          
+    0:00:30     765.4      0.10       2.2      17.5                          
+    0:00:30     765.4      0.10       2.2      17.5                          
+    0:00:30     765.4      0.10       2.2      17.5                          
+    0:00:31     773.6      0.09       1.9      17.5 d[24]                    
+    0:00:32     779.7      0.08       1.8      17.5 d[24]                    
+    0:00:33     783.2      0.07       1.7      17.5 d[24]                    
+    0:00:34     787.4      0.07       1.6      17.5 d[24]                    
+    0:00:34     791.9      0.07       1.6      17.5                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:34     791.9      0.07       1.6      17.5                          
+    0:00:35     791.9      0.07       1.6      17.5 d[24]                    
+    0:00:36     797.2      0.07       1.5      17.5 d[24]                    
+    0:00:36     804.2      0.07       1.5      17.5 d[24]                    
+    0:00:37     810.9      0.06       1.4      17.5 d[24]                    
+    0:00:37     813.2      0.06       1.4      17.5 d[24]                    
+    0:00:37     814.4      0.06       1.4      17.5 d[24]                    
+    0:00:38     814.6      0.06       1.3      17.5 d[24]                    
+    0:00:38     816.3      0.06       1.3      17.5 d[24]                    
+    0:00:38     817.6      0.06       1.3      17.5 d[24]                    
+    0:00:39     823.3      0.06       1.3      17.5 d[24]                    
+    0:00:40     831.5      0.05       1.0      17.5 d[28]                    
+    0:00:41     837.7      0.05       1.0      17.5 d[28]                    
+    0:00:41     863.8      0.05       0.9      17.5 d[28]                    
+    0:00:42     865.8      0.05       0.9      17.5 d[28]                    
+    0:00:42     872.2      0.04       0.9      17.5 d[28]                    
+    0:00:43     880.5      0.04       0.8      17.5 d[28]                    
+    0:00:43     885.3      0.04       0.8      17.5 d[28]                    
+    0:00:43     889.0      0.04       0.8      17.5 d[28]                    
+    0:00:44     897.1      0.04       1.0      17.5 d[28]                    
+    0:00:44     901.9      0.04       1.0      17.5 d[28]                    
+    0:00:45     911.2      0.04       0.9      17.5 d[28]                    
+    0:00:46     913.3      0.04       0.9      17.5 d[28]                    
+    0:00:46     930.6      0.04       0.9      17.5 d[28]                    
+    0:00:47     937.1      0.03       0.8      17.5 d[28]                    
+    0:00:47     943.2      0.03       0.8      17.5 d[28]                    
+    0:00:48     944.4      0.03       0.8      17.5 d[28]                    
+    0:00:48     947.2      0.03       0.8      17.5 d[28]                    
+    0:00:48     950.6      0.03       0.7      17.5 d[28]                    
+    0:00:49     951.5      0.03       0.7      17.5 d[28]                    
+    0:00:49     953.9      0.03       0.7      17.5 d[28]                    
+    0:00:49     954.2      0.03       0.8      17.5 d[28]                    
+    0:00:50     956.0      0.03       0.7      17.5 d[28]                    
+    0:00:50     956.4      0.03       0.7      17.5 d[28]                    
+    0:00:50     963.1      0.03       0.7      17.5 d[28]                    
+    0:00:51     964.6      0.03       0.7      17.5 d[28]                    
+    0:00:51     965.3      0.03       0.7      17.5 d[28]                    
+    0:00:51     967.5      0.03       0.7      17.5 d[28]                    
+    0:00:52     968.0      0.03       0.7      17.5 d[28]                    
+    0:00:52     967.9      0.03       0.7      17.5 d[28]                    
+    0:00:52     967.9      0.03       0.7      17.5 d[28]                    
+    0:00:52     969.5      0.03       0.7      17.5 d[28]                    
+    0:00:53     971.7      0.03       0.7      17.5 d[28]                    
+    0:00:54     975.2      0.03       0.6      17.5 d[28]                    
+    0:00:54     979.1      0.03       0.6      17.5 d[28]                    
+    0:00:55     986.9      0.03       0.6      17.5 d[28]                    
+    0:00:55    1000.4      0.02       0.6      17.5 d[28]                    
+    0:00:56    1003.8      0.02       0.6      17.5 d[28]                    
+    0:00:56    1014.4      0.02       0.6      17.5 d[28]                    
+    0:00:57    1008.8      0.02       0.6      17.5 d[28]                    
+    0:00:57    1008.8      0.02       0.6      17.5 d[28]                    
+    0:00:57    1008.7      0.02       0.6      17.5 d[28]                    
+    0:00:58    1008.5      0.02       0.5      17.5 d[28]                    
+    0:00:58    1015.0      0.02       0.5      17.5 d[28]                    
+    0:00:59    1017.7      0.02       0.5      17.5 d[28]                    
+    0:00:59    1014.8      0.02       0.5      17.5 d[28]                    
+    0:01:00    1020.8      0.02       0.5      17.5 d[28]                    
+    0:01:00    1024.4      0.02       0.5      17.5 d[28]                    
+    0:01:01    1026.7      0.02       0.5      17.5 d[28]                    
+    0:01:01    1027.2      0.02       0.5      17.5 d[28]                    
+    0:01:01    1028.6      0.02       0.5      17.5 d[28]                    
+    0:01:01    1028.5      0.02       0.5      17.5 d[28]                    
+    0:01:02    1032.8      0.02       0.5      17.5 d[28]                    
+    0:01:02    1031.1      0.02       0.5      17.5 d[28]                    
+    0:01:03    1037.5      0.02       0.5      17.5 d[28]                    
+    0:01:03    1038.8      0.02       0.5      17.5 d[28]                    
+    0:01:04    1039.8      0.02       0.4      17.5 d[28]                    
+    0:01:04    1041.0      0.02       0.4      17.5 d[28]                    
+    0:01:04    1042.7      0.02       0.4      17.5 d[28]                    
+    0:01:04    1047.5      0.02       0.4      17.5 d[28]                    
+    0:01:05    1048.0      0.02       0.4      17.5 d[28]                    
+    0:01:05    1045.0      0.02       0.4      17.5 d[28]                    
+    0:01:06    1049.0      0.02       0.4      17.5 d[28]                    
+    0:01:06    1049.9      0.02       0.4      17.5 d[28]                    
+    0:01:07    1056.2      0.02       0.4      17.5 d[28]                    
+    0:01:07    1061.1      0.02       0.4      17.5 d[28]                    
+    0:01:08    1064.1      0.02       0.4      17.5 d[28]                    
+    0:01:08    1063.5      0.02       0.4      17.5 d[28]                    
+    0:01:09    1064.3      0.02       0.4      17.5 d[28]                    
+    0:01:09    1064.8      0.02       0.4      17.5 d[28]                    
+    0:01:10    1065.1      0.02       0.4      17.5 d[28]                    
+    0:01:10    1064.9      0.02       0.4      17.5 d[28]                    
+    0:01:10    1066.3      0.02       0.4      17.5 d[28]                    
+    0:01:10    1067.4      0.02       0.4      17.5 d[28]                    
+    0:01:11    1068.9      0.02       0.4      17.5 d[28]                    
+    0:01:11    1077.5      0.02       0.3      17.5 d[28]                    
+    0:01:12    1082.5      0.02       0.3      17.5 d[28]                    
+    0:01:12    1083.6      0.02       0.3      17.5 d[28]                    
+    0:01:12    1084.7      0.02       0.3      17.5 d[28]                    
+    0:01:13    1084.0      0.02       0.3      17.5 d[28]                    
+    0:01:13    1084.4      0.02       0.3      17.5 d[28]                    
+    0:01:14    1084.5      0.02       0.3      17.5 d[28]                    
+    0:01:14    1087.7      0.02       0.3      17.5 d[30]                    
+    0:01:14    1090.9      0.02       0.3      17.5 d[28]                    
+    0:01:15    1091.6      0.01       0.3      17.5 d[30]                    
+    0:01:15    1093.0      0.01       0.3      17.5 d[28]                    
+    0:01:15    1093.7      0.01       0.3      17.5 d[28]                    
+    0:01:15    1093.9      0.01       0.3      17.5 d[28]                    
+    0:01:15    1094.8      0.01       0.3      17.5 d[30]                    
+    0:01:16    1094.9      0.01       0.3      17.5 d[30]                    
+    0:01:16    1096.6      0.01       0.3      17.5 d[28]                    
+    0:01:16    1097.9      0.01       0.3      17.5 d[28]                    
+    0:01:16    1100.3      0.01       0.3      17.5 d[28]                    
+    0:01:16    1101.0      0.01       0.3      17.5 d[28]                    
+    0:01:17    1102.2      0.01       0.2      17.5 d[28]                    
+    0:01:17    1104.3      0.01       0.2      17.5 d[28]                    
+    0:01:17    1105.4      0.01       0.2      17.5 d[28]                    
+    0:01:18    1106.5      0.01       0.2      17.5 d[28]                    
+    0:01:18    1108.9      0.01       0.2      17.5 d[28]                    
+    0:01:18    1109.0      0.01       0.2      17.5 d[28]                    
+    0:01:18    1110.4      0.01       0.2      17.5 d[28]                    
+    0:01:19    1111.2      0.01       0.2      17.5 d[28]                    
+    0:01:19    1111.6      0.01       0.2      17.5 d[28]                    
+    0:01:19    1112.0      0.01       0.2      17.5 d[28]                    
+    0:01:19    1112.5      0.01       0.2      17.5 d[28]                    
+    0:01:19    1112.4      0.01       0.2      17.5 d[28]                    
+    0:01:20    1112.8      0.01       0.2      17.5 d[28]                    
+    0:01:20    1113.4      0.01       0.2      17.5 d[28]                    
+    0:01:20    1114.6      0.01       0.2      17.5 d[28]                    
+    0:01:20    1115.8      0.01       0.2      17.5 d[28]                    
+    0:01:21    1117.1      0.01       0.1      17.5 d[28]                    
+    0:01:21    1117.8      0.01       0.1      17.5 d[28]                    
+    0:01:21    1117.6      0.01       0.1      17.5 d[28]                    
+    0:01:21    1118.1      0.01       0.1      17.5 d[28]                    
+    0:01:22    1119.3      0.01       0.1      17.5 d[28]                    
+    0:01:22    1119.1      0.01       0.1      17.5 d[28]                    
+    0:01:22    1120.4      0.01       0.1      17.5 d[28]                    
+    0:01:22    1120.0      0.01       0.1      17.5 d[28]                    
+    0:01:22    1121.5      0.01       0.1      17.5 d[28]                    
+    0:01:23    1123.7      0.01       0.1      17.5 d[28]                    
+    0:01:23    1122.6      0.01       0.1      17.5 d[28]                    
+    0:01:23    1122.9      0.01       0.1      17.5 d[28]                    
+    0:01:24    1123.0      0.01       0.1      17.5 d[28]                    
+    0:01:24    1123.8      0.01       0.1      17.5 d[28]                    
+    0:01:24    1124.6      0.01       0.1      17.5 d[28]                    
+    0:01:25    1124.5      0.01       0.1      17.5 d[28]                    
+    0:01:25    1124.9      0.01       0.1      17.5 d[30]                    
+    0:01:25    1126.9      0.01       0.1      17.5 d[30]                    
+    0:01:25    1127.4      0.01       0.1      17.5 d[28]                    
+    0:01:25    1129.1      0.01       0.1      17.5 d[28]                    
+    0:01:26    1133.2      0.01       0.1      17.5 d[28]                    
+    0:01:26    1133.5      0.01       0.1      17.5 d[28]                    
+    0:01:26    1134.2      0.01       0.1      17.5 d[28]                    
+    0:01:27    1136.2      0.01       0.1      17.5 d[28]                    
+    0:01:27    1136.5      0.01       0.1      17.5 d[28]                    
+    0:01:27    1137.4      0.01       0.1      17.5 d[28]                    
+    0:01:27    1137.5      0.01       0.1      17.5 d[28]                    
+    0:01:27    1142.7      0.01       0.1      17.5 d[28]                    
+    0:01:28    1143.4      0.01       0.1      17.5 d[28]                    
+    0:01:28    1143.1      0.01       0.1      17.5 d[30]                    
+    0:01:28    1144.8      0.01       0.1      17.5 d[28]                    
+    0:01:29    1146.5      0.01       0.1      17.5 d[28]                    
+    0:01:29    1149.7      0.01       0.0      17.5 d[28]                    
+    0:01:29    1152.0      0.01       0.0      17.5 d[28]                    
+    0:01:29    1154.0      0.00       0.0      17.5 d[28]                    
+    0:01:30    1155.0      0.00       0.0      17.5 d[28]                    
+    0:01:30    1155.2      0.00       0.0      17.5 d[28]                    
+    0:01:30    1155.4      0.00       0.0      17.5 d[28]                    
+    0:01:30    1156.0      0.00       0.0      17.5 d[28]                    
+    0:01:30    1157.8      0.00       0.0      17.5 d[28]                    
+    0:01:31    1158.7      0.00       0.0      17.5 d[28]                    
+    0:01:31    1159.1      0.00       0.0      17.5 d[28]                    
+    0:01:31    1159.8      0.00       0.0      17.5 d[28]                    
+    0:01:31    1159.8      0.00       0.0      17.5 d[28]                    
+    0:01:32    1159.6      0.00       0.0      17.5 d[28]                    
+    0:01:32    1159.7      0.00       0.0      17.5 d[28]                    
+    0:01:32    1159.7      0.00       0.0      17.5 d[28]                    
+    0:01:32    1160.3      0.00       0.0      17.5 d[28]                    
+    0:01:33    1160.9      0.00       0.0      17.5 d[28]                    
+    0:01:33    1161.2      0.00       0.0      17.5 d[28]                    
+    0:01:33    1161.5      0.00       0.0      17.5 d[28]                    
+    0:01:33    1164.3      0.00       0.0      17.5 d[28]                    
+    0:01:34    1165.7      0.00       0.0      17.5 d[28]                    
+    0:01:34    1166.3      0.00       0.0      17.5 d[28]                    
+    0:01:34    1168.1      0.00       0.0      17.5 d[28]                    
+    0:01:34    1168.3      0.00       0.0      17.5 d[28]                    
+    0:01:35    1169.0      0.00       0.0      17.5 d[28]                    
+    0:01:35    1168.8      0.00       0.0      17.5 d[28]                    
+    0:01:35    1169.6      0.00       0.0      17.5 d[28]                    
+    0:01:35    1170.8      0.00       0.0      17.5 d[28]                    
+    0:01:35    1171.3      0.00       0.0      17.5 d[28]                    
+    0:01:36    1171.7      0.00       0.0      17.5 d[28]                    
+    0:01:36    1174.0      0.00       0.0      17.5 d[28]                    
+    0:01:36    1173.6      0.00       0.0      17.5 d[28]                    
+    0:01:36    1174.2      0.00       0.0      17.5 d[28]                    
+    0:01:36    1174.4      0.00       0.0      17.5 d[28]                    
+    0:01:37    1174.3      0.00       0.0      17.5 d[28]                    
+    0:01:37    1175.4      0.00       0.0      17.5 d[28]                    
+    0:01:37    1175.6      0.00       0.0      17.5 d[28]                    
+    0:01:37    1178.6      0.00       0.0      17.5 d[28]                    
+    0:01:37    1179.0      0.00       0.0      17.5 d[28]                    
+    0:01:38    1178.0      0.00       0.0      17.5 d[28]                    
+    0:01:38    1178.0      0.00       0.0      17.5 d[28]                    
+    0:01:38    1177.8      0.00       0.0      17.5 d[28]                    
+    0:01:39    1177.1      0.00       0.0      17.5 d[28]                    
+    0:01:39    1178.9      0.00       0.0      17.5 d[28]                    
+    0:01:39    1179.1      0.00       0.0      17.5 d[28]                    
+    0:01:39    1180.0      0.00       0.0      17.5 d[28]                    
+    0:01:39    1179.5      0.00       0.0      17.5 d[28]                    
+    0:01:40    1183.4      0.00       0.0      17.5 d[28]                    
+    0:01:40    1185.0      0.00       0.0      17.5 d[28]                    
+    0:01:40    1186.0      0.00       0.0      17.5 d[28]                    
+    0:01:41    1186.3      0.00       0.0      17.5 d[28]                    
+    0:01:41    1186.6      0.00       0.0      17.5 d[28]                    
+    0:01:41    1187.2      0.00       0.0      17.5 d[28]                    
+    0:01:41    1187.3      0.00       0.0      17.5 d[28]                    
+    0:01:41    1189.3      0.00       0.0      17.5 d[28]                    
+    0:01:42    1190.5      0.00       0.0      17.5 d[28]                    
+    0:01:44    1190.9      0.00       0.0      17.5 d[28]                    
+    0:01:45    1190.4      0.00       0.0      17.5 d[28]                    
+    0:01:45    1191.3      0.00       0.0      17.5                          
+    0:01:45    1191.3      0.00       0.0      17.5                          
+
+
+  Beginning Design Rule Fixing  (min_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:45    1191.3      0.00       0.0      17.5                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:45    1191.3      0.00       0.0      17.5                          
+    0:01:45    1191.3      0.00       0.0      17.5                          
+    0:01:45    1163.9      0.01       0.0      17.5                          
+    0:01:45    1159.2      0.00       0.0      17.5                          
+    0:01:45    1158.6      0.00       0.0      17.5                          
+    0:01:45    1158.4      0.00       0.0      17.5                          
+    0:01:45    1158.4      0.00       0.0      17.5                          
+    0:01:45    1158.4      0.00       0.0      17.5                          
+    0:01:46    1160.3      0.00       0.0      17.5                          
+    0:01:46    1087.0      0.02       0.5      17.5                          
+    0:01:47    1057.9      0.01       0.3      17.5                          
+    0:01:47    1050.0      0.01       0.3      17.5                          
+    0:01:47    1049.8      0.01       0.3      17.5                          
+    0:01:47    1049.8      0.01       0.3      17.5                          
+    0:01:47    1049.8      0.01       0.3      17.5                          
+    0:01:47    1049.8      0.01       0.3      17.5                          
+    0:01:47    1049.8      0.01       0.3      17.5                          
+    0:01:48    1058.5      0.01       0.1      17.5                          
+    0:01:48    1062.4      0.00       0.1      17.5                          
+    0:01:48    1063.1      0.00       0.0      17.5                          
+    0:01:49    1066.2      0.00       0.0      17.5                          
+    0:01:50    1068.3      0.00       0.0      17.5 d[28]                    
+    0:01:51    1068.4      0.00       0.0      17.5 d[28]                    
+    0:01:51    1070.1      0.00       0.0      17.5 d[30]                    
+    0:01:51    1061.3      0.00       0.0      17.5                          
+    0:01:51    1060.0      0.00       0.0      17.5                          
+    0:01:52    1021.5      0.02       0.5      17.5                          
+    0:01:52    1010.9      0.02       0.5      17.5                          
+    0:01:52    1008.1      0.02       0.5      17.5                          
+    0:01:52    1007.9      0.02       0.5      17.5                          
+    0:01:52    1007.9      0.02       0.5      17.5                          
+    0:01:52    1007.9      0.02       0.5      17.5                          
+    0:01:52    1007.9      0.02       0.5      17.5                          
+    0:01:52    1007.9      0.02       0.5      17.5                          
+    0:01:53    1016.1      0.01       0.2      17.5                          
+    0:01:53    1017.9      0.01       0.1      17.5                          
+    0:01:53    1020.3      0.01       0.1      17.5                          
+    0:01:54    1023.7      0.00       0.1      17.5                          
+    0:01:54    1025.3      0.00       0.1      17.5                          
+    0:01:55    1026.1      0.00       0.0      17.5                          
+    0:01:55    1025.9      0.00       0.0      17.5                          
+    0:01:55    1027.9      0.00       0.0      17.5                          
+    0:01:56    1030.7      0.00       0.0      17.5                          
+    0:01:56    1034.5      0.00       0.0      17.5                          
+    0:01:57    1038.3      0.00       0.0      17.5                          
+    0:01:57    1038.9      0.00       0.0      17.5 d[30]                    
+    0:01:58    1039.2      0.00       0.0      17.5                          
+    0:01:58    1036.6      0.00       0.0      17.5                          
+    0:01:58    1034.6      0.00       0.0      17.5                          
+    0:01:59    1034.7      0.00       0.0      17.5                          
+    0:02:00    1034.9      0.00       0.0      17.5 d[30]                    
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Removing port 'CO' from design 'FLP_mul_DW01_add_3'
+Removing port 'A[24]' from design 'FLP_mul_DW01_add_4'
+Removing port 'A[23]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[24]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[23]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[22]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[21]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[20]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[19]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[18]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[17]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[16]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[15]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[14]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[13]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[12]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[11]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[10]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[9]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[8]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[7]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[6]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[5]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[4]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[3]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[2]' from design 'FLP_mul_DW01_add_4'
+Removing port 'B[1]' from design 'FLP_mul_DW01_add_4'
+Removing port 'CI' from design 'FLP_mul_DW01_add_4'
+Removing port 'CO' from design 'FLP_mul_DW01_add_4'
+Removing port 'a[23]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'b[23]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[21]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[20]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[19]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[18]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[17]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[16]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[15]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[14]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[13]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[12]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[11]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[10]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[9]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[8]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[7]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[6]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[5]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[4]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[3]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[2]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[1]' from design 'FLP_mul_DW_mult_uns_1'
+Removing port 'product[0]' from design 'FLP_mul_DW_mult_uns_1'
+Information: Updating design information... (UID-85)
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : FLP_mul
+Version: T-2022.03
+Date   : Mon Oct  5 20:42:13 2026
+****************************************
+
+Operating Conditions: ss0p72vm40c   Library: N16ADFP_StdCellss0p72vm40c_ccs
+Wire Load Model Mode: top
+
+  Startpoint: a[17] (input port clocked by clk)
+  Endpoint: d[30] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FLP_mul            ZeroWireload          N16ADFP_StdCellss0p72vm40c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  a[17] (in)                                          0.000000   0.000000 r
+  mult_31/a[17] (FLP_mul_DW_mult_uns_1)               0.000000   0.000000 r
+  mult_31/U3006/Z (XOR2D8BWP16P90LVT)                 0.018753   0.018753 f
+  mult_31/U1853/ZN (ND2D4BWP16P90LVT)                 0.006549   0.025302 r
+  mult_31/U2319/Z (BUFFD4BWP16P90LVT)                 0.012314   0.037616 r
+  mult_31/U1917/ZN (OAI22D2BWP16P90LVT)               0.009897   0.047514 f
+  mult_31/U627/S (FA1D1BWP16P90LVT)                   0.041203   0.088717 r
+  mult_31/U624/S (FA1D1BWP16P90LVT)                   0.038532   0.127249 f
+  mult_31/U622/S (FA1D1BWP16P90LVT)                   0.042674   0.169923 r
+  mult_31/U3029/S (FA1D2BWP16P90LVT)                  0.043373   0.213296 f
+  mult_31/U2256/ZN (IND2D2BWP16P90LVT)                0.007657   0.220953 r
+  mult_31/U2595/Z (OR2D1BWP16P90LVT)                  0.010049   0.231002 r
+  mult_31/U2559/ZN (ND2D1BWP16P90LVT)                 0.006409   0.237411 f
+  mult_31/U1805/ZN (AOI21D1BWP16P90LVT)               0.009285   0.246696 r
+  mult_31/U1804/ZN (NR2D1BWP16P90LVT)                 0.006378   0.253074 f
+  mult_31/U1802/ZN (NR2D1BWP16P90LVT)                 0.009267   0.262341 r
+  mult_31/U3108/ZN (OAI21D2BWP16P90LVT)               0.008174   0.270515 f
+  mult_31/U2560/ZN (XNR2D4BWP16P90LVT)                0.023871   0.294386 r
+  mult_31/product[47] (FLP_mul_DW_mult_uns_1)         0.000000   0.294386 r
+  U100/ZN (CKND8BWP16P90LVT)                          0.008081   0.302467 f
+  U75/ZN (CKND12BWP16P90LVT)                          0.008995   0.311462 r
+  U98/Z (MUX2D2BWP16P90LVT)                           0.020577   0.332039 f
+  add_42/A[7] (FLP_mul_DW01_add_4)                    0.000000   0.332039 f
+  add_42/U166/ZN (ND2D2BWP16P90LVT)                   0.007911   0.339949 r
+  add_42/U182/ZN (CKNR2D4BWP16P90LVT)                 0.008221   0.348171 f
+  add_42/U202/ZN (CKND2D4BWP16P90LVT)                 0.008045   0.356215 r
+  add_42/U220/ZN (CKNR2D4BWP16P90LVT)                 0.007069   0.363284 f
+  add_42/U214/ZN (CKND2D4BWP16P90LVT)                 0.009855   0.373139 r
+  add_42/U173/ZN (CKND8BWP16P90LVT)                   0.007567   0.380706 f
+  add_42/SUM[24] (FLP_mul_DW01_add_4)                 0.000000   0.380706 f
+  add_1_root_add_1_root_add_46/CI (FLP_mul_DW01_add_3)
+                                                      0.000000   0.380706 f
+  add_1_root_add_1_root_add_46/U139/ZN (AOI21D1BWP16P90LVT)
+                                                      0.011974   0.392680 r
+  add_1_root_add_1_root_add_46/U102/Z (XOR2D4BWP16P90LVT)
+                                                      0.022180   0.414860 r
+  add_1_root_add_1_root_add_46/SUM[4] (FLP_mul_DW01_add_3)
+                                                      0.000000   0.414860 r
+  U95/Z (AN4D4BWP16P90LVT)                            0.019545   0.434405 r
+  U91/ZN (ND3D2BWP16P90LVT)                           0.010006   0.444411 f
+  U113/Z (XOR2D1BWP16P90LVT)                          0.014585   0.458996 r
+  d[30] (out)                                         0.000000   0.458996 r
+  data arrival time                                              0.458996
+
+  max_delay                                           0.459000   0.459000
+  output external delay                               0.000000   0.459000
+  data required time                                             0.459000
+  --------------------------------------------------------------------------
+  data required time                                             0.459000
+  data arrival time                                              -0.458996
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.000004
+
+
+Writing ddc file '/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul/Delay/round2/design.ddc'.
+Writing verilog file '/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul/Delay/round2/netlist.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul/Delay/round2/timing.sdf'. (WT-3)
+HW1_DC_COMPLETE: FLP_mul Delay period=0.459 ns
+exit 0
+
+Memory usage for this session 1667 Mbytes.
+Memory usage for this session including child processes 1667 Mbytes.
+CPU usage for this session 215 seconds ( 0.06 hours ).
+Elapsed time for this session 225 seconds ( 0.06 hours ).
+
+Thank you...

@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1791203717.737678310, "rt":0.58, "ut":0.26, "st":0.13}}
+{"vcselab":{"timestamp_begin":1791203718.404462766, "rt":0.70, "ut":0.43, "st":0.12}}
+{"link":{"timestamp_begin":1791203719.174767531, "rt":0.32, "ut":0.24, "st":0.09}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1791203716.983759897}
+{"VCS_COMP_START_TIME": 1791203716.983759897}
+{"VCS_COMP_END_TIME": 1791203720.747199905}
+{"VCS_USER_OPTIONS": "-R -debug_access+all +full64 +access+r -sverilog -top testbench -o /MasterClass/M143010027_ALU/Hws/HW1/pre_sim/FLP_adder_4/simv +incdir+/MasterClass/M143010027_ALU/Hws/HW1/pre_sim/FLP_adder_4 +v2k +incdir+/MasterClass/M143010027_ALU/Hws/HW1/RTL/FLP_adder_4 +vcs+fsdbon +fsdb+mda +fsdbfile+wave.fsdb /MasterClass/M143010027_ALU/Hws/HW1/pre_sim/testbench.v /MasterClass/M143010027_ALU/Hws/HW1/RTL/FLP_adder_4/FLP_adder_4.v"}
+{"vcs1": {"peak_mem": 265208}}
+{"vcselab": {"peak_mem": 135732}}

@@ -1,0 +1,655 @@
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf"
+   ***    Annotation scope: testbench.test_module
+   ***    SDF Annotator log file: "sdf_annotation.log"
+   ***    MTM selection: "MAXIMUM"
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Mon Oct  5 20:41:15 2026
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3466
+module: DFQD2BWP16P90LVT, "instance: testbench.test_module.s1_ea_reg_0_"
+  SDF Warning: The path from s1_ea_reg_0_.Q to 
+  add_0_root_sub_0_root_sub_30.U2.A2 doesn't have a simple wire connection, 
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3468
+module: DFQD2BWP16P90LVT, "instance: testbench.test_module.s1_ea_reg_0_"
+  SDF Warning: The path from s1_ea_reg_0_.Q to 
+  add_0_root_sub_0_root_sub_30.U1.A2 doesn't have a simple wire connection, 
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3469
+module: DFQD2BWP16P90LVT, "instance: testbench.test_module.s1_ea_reg_7_"
+  SDF Warning: The path from s1_ea_reg_7_.Q to 
+  add_0_root_sub_0_root_sub_30.U1_7.A1 doesn't have a simple wire connection, 
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3472
+module: DFQD2BWP16P90LVT, "instance: testbench.test_module.s1_ea_reg_1_"
+  SDF Warning: The path from s1_ea_reg_1_.Q to 
+  add_0_root_sub_0_root_sub_30.U1_1.A doesn't have a simple wire connection, 
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3475
+module: DFQD2BWP16P90LVT, "instance: testbench.test_module.s1_ea_reg_2_"
+  SDF Warning: The path from s1_ea_reg_2_.Q to 
+  add_0_root_sub_0_root_sub_30.U1_2.A doesn't have a simple wire connection, 
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3478
+module: DFQD2BWP16P90LVT, "instance: testbench.test_module.s1_ea_reg_3_"
+  SDF Warning: The path from s1_ea_reg_3_.Q to 
+  add_0_root_sub_0_root_sub_30.U1_3.A doesn't have a simple wire connection, 
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3481
+module: DFQD2BWP16P90LVT, "instance: testbench.test_module.s1_ea_reg_4_"
+  SDF Warning: The path from s1_ea_reg_4_.Q to 
+  add_0_root_sub_0_root_sub_30.U1_4.A doesn't have a simple wire connection, 
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3484
+module: DFQD2BWP16P90LVT, "instance: testbench.test_module.s1_ea_reg_5_"
+  SDF Warning: The path from s1_ea_reg_5_.Q to 
+  add_0_root_sub_0_root_sub_30.U1_5.A doesn't have a simple wire connection, 
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3487
+module: DFQD2BWP16P90LVT, "instance: testbench.test_module.s1_ea_reg_6_"
+  SDF Warning: The path from s1_ea_reg_6_.Q to 
+  add_0_root_sub_0_root_sub_30.U1_6.A doesn't have a simple wire connection, 
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3490
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U10"
+  SDF Warning: The path from U10.Z to add_37.U47.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3492
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U9"
+  SDF Warning: The path from U9.Z to add_37.U46.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3494
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U8"
+  SDF Warning: The path from U8.Z to add_37.U45.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3496
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U7"
+  SDF Warning: The path from U7.Z to add_37.U44.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3498
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U6"
+  SDF Warning: The path from U6.Z to add_37.U43.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3500
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U5"
+  SDF Warning: The path from U5.Z to add_37.U42.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3502
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U4"
+  SDF Warning: The path from U4.Z to add_37.U41.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3504
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U3"
+  SDF Warning: The path from U3.Z to add_37.U40.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3506
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U25"
+  SDF Warning: The path from U25.Z to add_37.U39.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3508
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U24"
+  SDF Warning: The path from U24.Z to add_37.U38.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3510
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U23"
+  SDF Warning: The path from U23.Z to add_37.U37.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3512
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U22"
+  SDF Warning: The path from U22.Z to add_37.U36.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3514
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U21"
+  SDF Warning: The path from U21.Z to add_37.U35.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3516
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U20"
+  SDF Warning: The path from U20.Z to add_37.U34.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3518
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U19"
+  SDF Warning: The path from U19.Z to add_37.U33.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3520
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U18"
+  SDF Warning: The path from U18.Z to add_37.U32.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3522
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U17"
+  SDF Warning: The path from U17.Z to add_37.U31.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3524
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U16"
+  SDF Warning: The path from U16.Z to add_37.U30.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3526
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U14"
+  SDF Warning: The path from U14.Z to add_37.U29.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3528
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U13"
+  SDF Warning: The path from U13.Z to add_37.U28.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3530
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U12"
+  SDF Warning: The path from U12.Z to add_37.U27.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3532
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U11"
+  SDF Warning: The path from U11.Z to add_37.U26.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3535
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U15"
+  SDF Warning: The path from U15.Z to add_37.U25.A2 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3536
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U12"
+  SDF Warning: The path from U12.Z to add_37.U24.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3538
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U13"
+  SDF Warning: The path from U13.Z to add_37.U23.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3540
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U14"
+  SDF Warning: The path from U14.Z to add_37.U22.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3542
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U16"
+  SDF Warning: The path from U16.Z to add_37.U21.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3544
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U17"
+  SDF Warning: The path from U17.Z to add_37.U20.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3546
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U18"
+  SDF Warning: The path from U18.Z to add_37.U19.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3548
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U19"
+  SDF Warning: The path from U19.Z to add_37.U18.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3550
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U20"
+  SDF Warning: The path from U20.Z to add_37.U17.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3552
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U21"
+  SDF Warning: The path from U21.Z to add_37.U16.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3554
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U22"
+  SDF Warning: The path from U22.Z to add_37.U15.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3556
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U23"
+  SDF Warning: The path from U23.Z to add_37.U14.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3558
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U24"
+  SDF Warning: The path from U24.Z to add_37.U13.A1 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3560
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U5"
+  SDF Warning: The path from U5.Z to add_37.U12.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3562
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U6"
+  SDF Warning: The path from U6.Z to add_37.U11.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3564
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U7"
+  SDF Warning: The path from U7.Z to add_37.U10.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3566
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U8"
+  SDF Warning: The path from U8.Z to add_37.U9.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3568
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U9"
+  SDF Warning: The path from U9.Z to add_37.U8.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3570
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U10"
+  SDF Warning: The path from U10.Z to add_37.U7.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3573
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U15"
+  SDF Warning: The path from U15.Z to add_37.U6.A2 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3574
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U25"
+  SDF Warning: The path from U25.Z to add_37.U5.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3576
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U3"
+  SDF Warning: The path from U3.Z to add_37.U4.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3578
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U4"
+  SDF Warning: The path from U4.Z to add_37.U3.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3580
+module: AO22D1BWP16P90LVT, "instance: testbench.test_module.U11"
+  SDF Warning: The path from U11.Z to add_37.U2.A1 doesn't have a simple wire 
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3583
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.add_0_root_sub_0_root_sub_30.U1_3"
+  SDF Warning: The path from add_0_root_sub_0_root_sub_30.U1_3.S to U147.A1 
+  doesn't have a simple wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3585
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.add_0_root_sub_0_root_sub_30.U1_4"
+  SDF Warning: The path from add_0_root_sub_0_root_sub_30.U1_4.S to U146.A1 
+  doesn't have a simple wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3587
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.add_0_root_sub_0_root_sub_30.U1_5"
+  SDF Warning: The path from add_0_root_sub_0_root_sub_30.U1_5.S to U145.A1 
+  doesn't have a simple wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3589
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.add_0_root_sub_0_root_sub_30.U1_6"
+  SDF Warning: The path from add_0_root_sub_0_root_sub_30.U1_6.S to U144.A1 
+  doesn't have a simple wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3591
+module: XOR3D2BWP16P90LVT, "instance: testbench.test_module.add_0_root_sub_0_root_sub_30.U1_7"
+  SDF Warning: The path from add_0_root_sub_0_root_sub_30.U1_7.Z to U143.A1 
+  doesn't have a simple wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3595
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U157"
+  SDF Warning: The path from mult_28.U157.S to U80.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3597
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U156"
+  SDF Warning: The path from mult_28.U156.S to U79.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3599
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U155"
+  SDF Warning: The path from mult_28.U155.S to U78.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3601
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U154"
+  SDF Warning: The path from mult_28.U154.S to U77.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3603
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U153"
+  SDF Warning: The path from mult_28.U153.S to U76.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3605
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U152"
+  SDF Warning: The path from mult_28.U152.S to U75.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3607
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U151"
+  SDF Warning: The path from mult_28.U151.S to U74.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3609
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U150"
+  SDF Warning: The path from mult_28.U150.S to U73.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3611
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U149"
+  SDF Warning: The path from mult_28.U149.S to U72.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3613
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U148"
+  SDF Warning: The path from mult_28.U148.S to U70.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3615
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U147"
+  SDF Warning: The path from mult_28.U147.S to U69.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3617
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U146"
+  SDF Warning: The path from mult_28.U146.S to U68.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3619
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U145"
+  SDF Warning: The path from mult_28.U145.S to U67.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3621
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U144"
+  SDF Warning: The path from mult_28.U144.S to U66.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3623
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U143"
+  SDF Warning: The path from mult_28.U143.S to U65.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3625
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U142"
+  SDF Warning: The path from mult_28.U142.S to U64.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3627
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U141"
+  SDF Warning: The path from mult_28.U141.S to U63.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3629
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U140"
+  SDF Warning: The path from mult_28.U140.S to U62.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3631
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U139"
+  SDF Warning: The path from mult_28.U139.S to U61.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3633
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U138"
+  SDF Warning: The path from mult_28.U138.S to U59.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3635
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U137"
+  SDF Warning: The path from mult_28.U137.S to U58.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3637
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U136"
+  SDF Warning: The path from mult_28.U136.S to U57.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3639
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U135"
+  SDF Warning: The path from mult_28.U135.S to U56.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3641
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U134"
+  SDF Warning: The path from mult_28.U134.S to U55.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3643
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.mult_28.U133"
+  SDF Warning: The path from mult_28.U133.S to U54.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3645
+module: XOR4D1BWP16P90, "instance: testbench.test_module.mult_28.U1315"
+  SDF Warning: The path from mult_28.U1315.Z to U53.A1 doesn't have a simple 
+  wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3647
+module: XOR2D1BWP16P90LVT, "instance: testbench.test_module.add_0_root_sub_0_root_sub_30.U2"
+  SDF Warning: The path from add_0_root_sub_0_root_sub_30.U2.Z to U52.A1 
+  doesn't have a simple wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3649
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.add_0_root_sub_0_root_sub_30.U1_1"
+  SDF Warning: The path from add_0_root_sub_0_root_sub_30.U1_1.S to U51.A1 
+  doesn't have a simple wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FLP_mul_3/Area/round3/timing.sdf, 3651
+module: FA1D1BWP16P90LVT, "instance: testbench.test_module.add_0_root_sub_0_root_sub_30.U1_2"
+  SDF Warning: The path from add_0_root_sub_0_root_sub_30.U1_2.S to U50.A1 
+  doesn't have a simple wire connection, delay will still be annotated.
+
+
+          Total errors: 0
+          Total warnings: 89
+   ***    SDF annotation completed: Mon Oct  5 20:41:15 2026
+
+

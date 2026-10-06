@@ -1,0 +1,75 @@
+$ vcs -R -debug_access+all +full64 +access+r -sverilog -top testbench -o /MasterClass/M143010027_ALU/Hws/HW1/pre_sim/FLP_mul_3/simv +incdir+/MasterClass/M143010027_ALU/Hws/HW1/pre_sim/FLP_mul_3 +v2k +incdir+/MasterClass/M143010027_ALU/Hws/HW1/RTL/FLP_mul_3 +vcs+fsdbon +fsdb+mda +fsdbfile+wave.fsdb /MasterClass/M143010027_ALU/Hws/HW1/pre_sim/testbench.v /MasterClass/M143010027_ALU/Hws/HW1/RTL/FLP_mul_3/FLP_mul_3.v
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+            Version V-2023.12 -- Mon Oct  5 20:35:17 2026
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '/MasterClass/M143010027_ALU/Hws/HW1/pre_sim/testbench.v'
+Parsing included file 'run_config.vh'.
+Back to file '/MasterClass/M143010027_ALU/Hws/HW1/pre_sim/testbench.v'.
+Parsing design file '/MasterClass/M143010027_ALU/Hws/HW1/RTL/FLP_mul_3/FLP_mul_3.v'
+Top Level Modules:
+       testbench
+TimeScale is 1 ns / 1 fs
+Starting vcs inline pass...
+
+1 module and 0 UDP read.
+recompiling module testbench
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /MasterClass/M143010027_ALU/Hws/HW1/pre_sim/FLP_mul_3/simv ]; then chmod a-x /MasterClass/M143010027_ALU/Hws/HW1/pre_sim/FLP_mul_3/simv; fi
+g++  -o /MasterClass/M143010027_ALU/Hws/HW1/pre_sim/FLP_mul_3/simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/usr/cad/synopsys/vcs/2023.12/linux/lib -L/usr/cad/synopsys/vcs/2023.12/linux/lib  -Wl,-rpath-link=./   objs/amcQw_d.o   _20408_archive_1.so   SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2023.12/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /usr/cad/synopsys/vcs/2023.12/linux/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2023.12/share/PLI/VCS/LINUX/pli.a /usr/cad/synopsys/vcs/2023.12/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+/MasterClass/M143010027_ALU/Hws/HW1/pre_sim/FLP_mul_3/simv up to date
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version V-2023.12; Runtime version V-2023.12;  Oct  5 20:35 2026
+*Verdi* Loading libsscore_vcs202312.so
+FSDB Dumper for VCS, Release Verdi_V-2023.12, Linux, 11/15/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'wave.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the scope (testbench), layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+-----------------------------------------
+
+-               FLP_mul_3               -
+
+-----------------------------------------
+
+-----------------------------------------
+
+Score: 100
+
+Avg error: 2.145374e-08
+
+-----------------------------------------
+
+$finish called from file "/MasterClass/M143010027_ALU/Hws/HW1/pre_sim/testbench.v", line 296.
+$finish at simulation time            515000000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 515000000 fs
+CPU Time:      0.650 seconds;       Data structure size:   0.0Mb
+Mon Oct  5 20:35:20 2026
+CPU time: .441 seconds to compile + .582 seconds to elab + .444 seconds to link + .699 seconds in simulation

@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "design": "FXP_mul",
+  "verification_id": "23bc0597ca26b04df6de2e8fa07a9bb61151b024b3e2a6166afbbdea09ff90b4",
+  "synthesis_id": "9d543f305d91318c777911eea891aecef2690daa2e1943b466e684e8195e21cf",
+  "schedule": "TA_original",
+  "pipeline_stages": 1,
+  "period_ns": "5",
+  "path": "pre_sim/FXP_mul",
+  "log": "log/FXP_mul/pre_sim.log",
+  "round": null,
+  "checked": 100,
+  "errors": 0,
+  "waveform": "pre_sim/FXP_mul/wave.fsdb",
+  "wave_format": "fsdb"
+}

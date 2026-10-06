@@ -1,0 +1,313 @@
+#######################################################################################
+# log primitive debug message of FSDB dumping                                         #
+# This is for R&D to analyze when there are issues happening when FSDB dump           #
+#######################################################################################
+ANF: vcsd_get_serial_mode_status('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vcsd_get_serial_mode_status')
+ANF: vcsd_enable_sva_success_callback('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vcsd_enable_sva_success_callback')
+ANF: vcsd_disable_sva_success_callback('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vcsd_disable_sva_success_callback')
+ANF: vcsd_get_power_scope_name('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vcsd_get_power_scope_name')
+ANF: vcsd_dump_var_vpdg('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vcsd_dump_var_vpdg')
+ANF: vcsd_begin_no_value_var_info('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vcsd_begin_no_value_var_info')
+ANF: vcsd_end_no_value_var_info('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vcsd_end_no_value_var_info')
+ANF: vcsd_remove_xprop_merge_mode_callback('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vcsd_remove_xprop_merge_mode_callback')
+ANF: vhpi_get_cb_info('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhpi_get_cb_info')
+ANF: vhpi_free_handle('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhpi_free_handle')
+ANF: vhpi_fetch_vcsd_handle('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhpi_fetch_vcsd_handle')
+ANF: vhpi_fetch_vpi_handle('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhpi_fetch_vpi_handle')
+ANF: vhpi_has_verilog_parent('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhpi_has_verilog_parent')
+ANF: vhpi_is_verilog_scope('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhpi_is_verilog_scope')
+ANF: scsd_xprop_is_enabled('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: scsd_xprop_is_enabled')
+ANF: scsd_xprop_sig_is_promoted('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: scsd_xprop_sig_is_promoted')
+ANF: scsd_xprop_int_xvalue('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: scsd_xprop_int_xvalue')
+ANF: scsd_xprop_bool_xvalue('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: scsd_xprop_bool_xvalue')
+ANF: scsd_xprop_enum_xvalue('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: scsd_xprop_enum_xvalue')
+ANF: scsd_xprop_register_merge_mode_cb('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: scsd_xprop_register_merge_mode_cb')
+ANF: scsd_xprop_delete_merge_mode_cb('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: scsd_xprop_delete_merge_mode_cb')
+ANF: scsd_xprop_get_merge_mode('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: scsd_xprop_get_merge_mode')
+ANF: scsd_thread_get_info('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: scsd_thread_get_info')
+ANF: scsd_thread_vc_init('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: scsd_thread_vc_init')
+ANF: scsd_master_set_delta_sync_cbk('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: scsd_master_set_delta_sync_cbk')
+ANF: scsd_fgp_get_fsdb_cores('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: scsd_fgp_get_fsdb_cores')
+ANF: scsd_fgp_get_is_cpu_affinity_disabled('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: scsd_fgp_get_is_cpu_affinity_disabled')
+ANF: vdi_dt_get_vlog_variant_size_array_info('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vdi_dt_get_vlog_variant_size_array_info')
+ANF: vhdi_dt_get_type('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_dt_get_type')
+ANF: vhdi_dt_get_key('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_dt_get_key')
+ANF: vhdi_dt_get_vhdl_enum_info('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_dt_get_vhdl_enum_info')
+ANF: vhdi_dt_get_vhdl_physical_info('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_dt_get_vhdl_physical_info')
+ANF: vhdi_dt_get_vhdl_array_info('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_dt_get_vhdl_array_info')
+ANF: vhdi_dt_get_vhdl_record_info('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_dt_get_vhdl_record_info')
+ANF: vhdi_dt_get_vhdl_integer_range_info('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_dt_get_vhdl_integer_range_info')
+ANF: vhdi_def_traverse_module('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_def_traverse_module')
+ANF: vhdi_def_traverse_scope('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_def_traverse_scope')
+ANF: vhdi_def_traverse_variable('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_def_traverse_variable')
+ANF: vhdi_def_get_module_id_by_vhpi('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_def_get_module_id_by_vhpi')
+ANF: vhdi_def_get_handle_by_module_id('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_def_get_handle_by_module_id')
+ANF: vhdi_def_get_variable_info_by_vhpi('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_def_get_variable_info_by_vhpi')
+ANF: vhdi_def_free('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_def_free')
+ANF: vhdi_ist_traverse_scope('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_ist_traverse_scope')
+ANF: vhdi_ist_traverse_variable('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_ist_traverse_variable')
+ANF: vhdi_ist_convert_by_vhpi('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_ist_convert_by_vhpi')
+ANF: vhdi_ist_clone('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_ist_clone')
+ANF: vhdi_ist_free('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_ist_free')
+ANF: vhdi_ist_hash_key('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_ist_hash_key')
+ANF: vhdi_ist_compare('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_ist_compare')
+ANF: vhdi_ist_get_value_addr('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_ist_get_value_addr')
+ANF: vhdi_set_scsd_callback('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_set_scsd_callback')
+ANF: vhdi_cbk_set_force_callback('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_cbk_set_force_callback')
+ANF: vhdi_trigger_init_force('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_trigger_init_force')
+ANF: vhdi_ist_check_scsd_callback('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_ist_check_scsd_callback')
+ANF: vhdi_ist_add_scsd_callback('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_ist_add_scsd_callback')
+ANF: vhdi_ist_remove_scsd_callback('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_ist_remove_scsd_callback')
+ANF: vhdi_ist_get_scsd_user_data('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_ist_get_scsd_user_data')
+ANF: vhdi_add_time_change_callback('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_add_time_change_callback')
+ANF: vhdi_get_real_value_by_value_addr('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_get_real_value_by_value_addr')
+ANF: vhdi_get_64_value_by_value_addr('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_get_64_value_by_value_addr')
+ANF: vhdi_xprop_inst_is_promoted('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_xprop_inst_is_promoted')
+ANF: vdi_ist_convert_by_vhdi('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vdi_ist_convert_by_vhdi')
+ANF: vhdi_ist_get_module_id('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_ist_get_module_id')
+ANF: vhdi_refine_foreign_scope_type('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_refine_foreign_scope_type')
+ANF: vhdi_flush_callback('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_flush_callback')
+ANF: vhdi_set_orig_name('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_set_orig_name')
+ANF: vhdi_set_dump_pt('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_set_dump_pt')
+ANF: vhdi_set_int_subtype('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_set_int_subtype')
+ANF: vhdi_set_fixed_point('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_set_fixed_point')
+ANF: vhdi_get_fsdb_option('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_get_fsdb_option')
+ANF: vhdi_fgp_get_mode('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_fgp_get_mode')
+ANF: vhdi_node_register_composite_var('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_node_register_composite_var')
+ANF: vhdi_node_analysis('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_node_analysis')
+ANF: vhdi_node_id('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_node_id')
+ANF: vhdi_node_ist_check_scsd_callback('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_node_ist_check_scsd_callback')
+ANF: vhdi_node_ist_add_scsd_callback('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_node_ist_add_scsd_callback')
+ANF: vhdi_node_ist_get_value_addr('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_node_ist_get_value_addr')
+ANF: vhdi_enc_def_traverse_module('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_enc_def_traverse_module')
+ANF: vhdi_enc_def_traverse_scope('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_enc_def_traverse_scope')
+ANF: vhdi_enc_def_traverse_variable('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_enc_def_traverse_variable')
+ANF: vhdi_enc_ist_traverse_scope('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_enc_ist_traverse_scope')
+ANF: vhdi_enc_ist_traverse_variable('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_enc_ist_traverse_variable')
+ANF: vhdi_enc_ist_get_module_id('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_enc_ist_get_module_id')
+ANF: vhdi_enc_def_get_handle_by_module_id('/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv: undefined symbol: vhdi_enc_def_get_handle_by_module_id')
+VCS compile option:
+ option[0]: /MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv
+ option[1]: +full64
+ option[2]: +access+r
+ option[3]: +neg_tchk
+ option[4]: +fsdb+mda
+ option[5]: +fsdbfile+wave.fsdb
+ option[6]: /usr/cad/synopsys/vcs/2023.12/linux/bin/vcs1
+ option[7]: -Mcc=gcc
+ option[8]: -Mcplusplus=g++
+ option[9]: -Masflags=--32
+ option[10]: -Mcfl= -pipe -m32 -O -I/usr/cad/synopsys/vcs/2023.12/include 
+ option[11]: -Mxllcflags=
+ option[12]: -Mxcflags= -pipe -m32 -I/usr/cad/synopsys/vcs/2023.12/include
+ option[13]: -Mldflags= -m32 -m32 -rdynamic 
+ option[14]: -Mout=/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv
+ option[15]: -Mamsrun=
+ option[16]: -Mvcsaceobjs=
+ option[17]: -Mobjects= /usr/cad/synopsys/vcs/2023.12/linux/lib/libvirsim.so /usr/cad/synopsys/vcs/2023.12/linux/lib/liberrorinf.so /usr/cad/synopsys/vcs/2023.12/linux/lib/libsnpsmalloc.so /usr/cad/synopsys/vcs/2023.12/linux/lib/libvfs.so 
+ option[18]: -Mexternalobj=
+ option[19]: -Msaverestoreobj=/usr/cad/synopsys/vcs/2023.12/linux/lib/vcs_save_restore_new.o
+ option[20]: -Mcrt0=
+ option[21]: -Mcrtn=
+ option[22]: -Mcsrc=
+ option[23]: -Msyslibs=/usr/cad/synopsys/verdi/2023.12/share/PLI/VCS/LINUX/pli.a /usr/cad/synopsys/vcs/2023.12/linux/lib/ctype-stubs_32.a -ldl 
+ option[24]: -Xvcs_run_simv=1
+ option[25]: -debug_access+all
+ option[26]: +vpi
+ option[27]: +vcsd1
+ option[28]: +itf+/usr/cad/synopsys/vcs/2023.12/linux/lib/vcsdp_lite.tab
+ option[29]: +full64
+ option[30]: +access+r
+ option[31]: -top
+ option[32]: testbench
+ option[33]: -o
+ option[34]: /MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv
+ option[35]: -error=noMPD
+ option[36]: +neg_tchk
+ option[37]: -debug_access
+ option[38]: +vcs+fsdbon
+ option[39]: +fsdb+mda
+ option[40]: +fsdbfile+wave.fsdb
+ option[41]: -picarchive
+ option[42]: -P
+ option[43]: /usr/cad/synopsys/verdi/2023.12/share/PLI/VCS/LINUX/verdi.tab
+ option[44]: -fsdb
+ option[45]: -sverilog
+ option[46]: -gen_obj
+ option[47]: +incdir+/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay
+ option[48]: /MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v
+ option[49]: /MasterClass/M143010027_ALU/Hws/HW1/gate_level/FXP_adder/Delay/round4/netlist.v
+ option[50]: /cad/CBDK/ADFP/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/VERILOG/N16ADFP_StdCell.v
+ option[51]: -load
+ option[52]: /usr/cad/synopsys/verdi/2023.12/share/PLI/VCS/LINUX/libnovas.so:FSDBDumpCmd
+Chronologic Simulation VCS Release V-2023.12
+Linux 3.10.0-1160.119.1.el7.x86_64 #1 SMP Tue Jun 4 14:43:51 UTC 2024 x86_64
+CPU cores: 32
+Limit information:
+======================================
+cputime		unlimited
+filesize		unlimited
+datasize		unlimited
+stacksize		8192 kbytes
+coredumpsize		0 kbytes
+memoryuse		unlimited
+vmemoryuse		unlimited
+descriptors		65536
+memorylocked		64 kbytes
+maxproc		32768
+======================================
+(Special)Runtime environment variables:
+
+Cannot get runtime environment variables: environ is NULL
+Runtime command line arguments:
+argv[0]=/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv
+argv[1]=+full64
+argv[2]=+access+r
+argv[3]=+neg_tchk
+argv[4]=+fsdb+mda
+argv[5]=+fsdbfile+wave.fsdb
+168 profile - 100
+          CPU/Mem usage: 0.160 sys,  0.440 user,  194.35M mem
+169 Elapsed time:    0:00:00    Mon Oct  5 20:43:02 2026
+170 User CPU time used: 0 seconds
+171 System CPU time used: 0 seconds
+172 pliAppInit
+173 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
+174 FSDB_GATE is set.
+175 FSDB_RTL is set.
+176 FSDB_PACKED_MODE is enabled.
+177 FSDB_GATE_PACKED is enabled.
+178 FSDB_ALIAS_ARRAY_ELEM is set to 4294967295.
+179 Enable Parallel Dumping.
+180 pliAppMiscSet: New Sim Round
+181 pliEntryInit
+182 LIBSSCORE=found /usr/cad/synopsys/verdi/2023.12/share/PLI/lib/LINUX/libsscore_vcs202312.so through $NOVAS_HOME setting.
+183 FSDB Dumper for VCS, Release Verdi_V-2023.12, Linux, 11/15/2023
+184 (C) 1996 - 2023 by Synopsys, Inc.
+185 DVDI_is_vir_unload_enabled is enable
+186 FSDB_VCS_ENABLE_VC_TIME_CB is enable
+187 sps_call_fsdbDumpvars_vd_main at 0 : Unknown source file(0)
+188 *Verdi* : Create FSDB file 'wave.fsdb'
+189 [spi_vcs_vd_ppi_create_root]: no upf option
+190 compile option from '/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv.daidir/vcs_rebuild'.
+191   "vcs '-R' '-debug_access+all' '+full64' '+access+r' '-sverilog' '-top' 'testbench' '-o' '/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay/simv' '+incdir+/MasterClass/M143010027_ALU/Hws/HW1/post_sim/FXP_adder/Delay' '-error=noMPD' '+neg_tchk' '+vcs+fsdbon' '+fsdb+mda' '+fsdbfile+wave.fsdb' '/MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v' '/MasterClass/M143010027_ALU/Hws/HW1/gate_level/FXP_adder/Delay/round4/netlist.v' '/cad/CBDK/ADFP/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/VERILOG/N16ADFP_StdCell.v' 2>&1"
+192 *Verdi* : Begin traversing the scopes, layer (0).
+193 *Verdi* : Enable +mda dumping.
+194 *Verdi* : End of traversing.
+195 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.160 sys,  0.450 user,  290.13M mem
+                   incr: 0.000 sys,  0.010 user,  7.54M mem
+                   accu: 0.000 sys,  0.010 user,  7.54M mem
+              accu incr: 0.000 sys,  0.010 user,  7.54M mem
+
+          Count usage: 621 var,  652 idcode,  387 callback
+                 incr: 621 var,  652 idcode,  387 callback
+                 accu: 621 var,  652 idcode,  387 callback
+            accu incr: 621 var,  652 idcode,  387 callback
+196 Elapsed time:    0:00:00    Mon Oct  5 20:43:02 2026
+197 User CPU time used: 0 seconds
+198 System CPU time used: 0 seconds
+199 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.160 sys,  0.450 user,  291.18M mem
+                   incr: 0.000 sys,  0.000 user,  1.05M mem
+                   accu: 0.000 sys,  0.010 user,  8.60M mem
+              accu incr: 0.000 sys,  0.000 user,  1.05M mem
+
+          Count usage: 621 var,  652 idcode,  387 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 621 var,  652 idcode,  387 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+200 Elapsed time:    0:00:00    Mon Oct  5 20:43:02 2026
+201 User CPU time used: 0 seconds
+202 System CPU time used: 0 seconds
+203 sps_call_fsdbDumpfile_main at 0 : /MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v(81)
+204 argv[0]: (wave.fsdb)
+205 sps_call_fsdbDumpvars_vd_main at 0 : /MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v(82)
+206 argv[0]: (0)
+207 argv[1]: (handle) testbench
+208 *Verdi* : Begin traversing the scope (testbench), layer (0).
+209 *Verdi* : Enable +mda dumping.
+210 *Verdi* : End of traversing.
+211 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.160 sys,  0.450 user,  291.18M mem
+                   incr: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.000 sys,  0.000 user,  0.00M mem
+              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+
+          Count usage: 1242 var,  652 idcode,  387 callback
+                 incr: 621 var,  0 idcode,  0 callback
+                 accu: 621 var,  0 idcode,  0 callback
+            accu incr: 621 var,  0 idcode,  0 callback
+212 Elapsed time:    0:00:00    Mon Oct  5 20:43:02 2026
+213 User CPU time used: 0 seconds
+214 System CPU time used: 0 seconds
+215 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.160 sys,  0.450 user,  291.18M mem
+                   incr: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.000 sys,  0.000 user,  0.00M mem
+              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+
+          Count usage: 1242 var,  652 idcode,  387 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 621 var,  0 idcode,  0 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+216 Elapsed time:    0:00:00    Mon Oct  5 20:43:02 2026
+217 User CPU time used: 0 seconds
+218 System CPU time used: 0 seconds
+219 sps_call_fsdbDumpMDA_vd_main at 0 : /MasterClass/M143010027_ALU/Hws/HW1/post_sim/testbench.v(83)
+220 *Verdi* : Begin traversing the MDAs, layer (0).
+221 *Verdi* : Enable +mda and +packedmda dumping.
+222 *Verdi* : End of traversing the MDAs.
+223 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.160 sys,  0.460 user,  291.18M mem
+                   incr: 0.000 sys,  0.010 user,  0.00M mem
+                   accu: 0.000 sys,  0.010 user,  0.00M mem
+              accu incr: 0.000 sys,  0.010 user,  0.00M mem
+
+          Count usage: 1442 var,  652 idcode,  387 callback
+                 incr: 200 var,  0 idcode,  0 callback
+                 accu: 200 var,  0 idcode,  0 callback
+            accu incr: 200 var,  0 idcode,  0 callback
+224 Elapsed time:    0:00:00    Mon Oct  5 20:43:02 2026
+225 User CPU time used: 0 seconds
+226 System CPU time used: 0 seconds
+227 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.160 sys,  0.460 user,  291.18M mem
+                   incr: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.000 sys,  0.010 user,  0.00M mem
+              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+
+          Count usage: 1442 var,  652 idcode,  387 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 200 var,  0 idcode,  0 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+228 Elapsed time:    0:00:00    Mon Oct  5 20:43:02 2026
+229 User CPU time used: 0 seconds
+230 System CPU time used: 0 seconds
+231 End of simulation at 510000000
+232 Memory usage: 291.185 M
+233 Maximum resident set size: 132 MB
+234 Hard page faults: 0
+235 Soft page faults: 55764
+236 Elapsed time:    0:00:00    Mon Oct  5 20:43:02 2026
+237 User CPU time used: 0 seconds
+238 System CPU time used: 0 seconds
+239 Begin FSDB profile info:
+240 FSDB Writer : bc1(17990) bcn(1448) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.014419) io wait(0.000000) theadpool wait(0.000000)
+FSDB Writer cpu time : MT Compression : 0
+241 End FSDB profile info
+242 FSDB closed. Name: wave.fsdb Size: 549755863407
+243 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
+244                      - BlockUsed:1 Acquire:0 BufferUsed:195414
+245                      - Flush:5 Expand:0 ProducerWait:0 ConsumerWait:0
+246                      - MainProducerTime:0.656331060 TotalConsumerTime:0.000000000
+247                      - ElapsedTime:0.117875000
+248 Producer   0 profile - BlockUsed:2 Acquire:0 BufferUsed:195414
+249 Consumer   0 profile - Affinity:-1 CPUTime:0.000000000 LifeTime:0.000000000 (-nan%)
+250                      - BlockUsed:2 Acquire:0 BufferUsed:195414
+251 SimExit
+252 Elapsed time:    0:00:00    Mon Oct  5 20:43:02 2026
+253 User CPU time used: 0 seconds
+254 System CPU time used: 0 seconds
+255 Sim process exit
