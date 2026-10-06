@@ -1,4 +1,4 @@
-# Hw1. FXP/FLP add/mul
+# Hw1. FXP FLP add mul
 
 ## 1. Introduction
 
