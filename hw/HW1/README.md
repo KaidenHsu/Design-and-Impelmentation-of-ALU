@@ -1,4 +1,4 @@
-# Hw1. FXP FLP add mul
+# Hw1. Fixed-point and Floating-point Addition/Multiplication
 
 ## 1. Introduction
 
