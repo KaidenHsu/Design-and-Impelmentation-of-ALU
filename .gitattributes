@@ -1,0 +1,18 @@
+# Classify HDL sources.
+*.v linguist-language=Verilog
+*.sv linguist-language=SystemVerilog
+
+# Exclude generated simulation subdirectories.
+# Root-level testbench files remain counted.
+**/pre_sim/*/** linguist-generated=true
+**/post_sim/*/** linguist-generated=true
+
+# Exclude generated logs, results, and caches.
+**/log/** linguist-generated=true
+**/result/** linguist-generated=true
+**/scripts/run.log linguist-generated=true
+**/__pycache__/** linguist-generated=true
+
+# Exclude documentation and report assets.
+**/images/** linguist-documentation=true
+**/report/** linguist-documentation=true
