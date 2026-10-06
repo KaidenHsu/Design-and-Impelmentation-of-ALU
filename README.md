@@ -11,4 +11,4 @@
 
 [1]: hw/HW1/
 
-<p align="center"><img src="images/alu_banner.png" alt="ALU banner" /></p>
+<p align="center"><img src="images/banner.png" alt="ALU banner" /></p>
